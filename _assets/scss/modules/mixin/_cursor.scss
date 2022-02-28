@@ -1,0 +1,11 @@
+@use"../variables/variables";
+
+
+// 共通タイトル
+@mixin cursor {
+  cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+      opacity: 0.8;
+    }
+}

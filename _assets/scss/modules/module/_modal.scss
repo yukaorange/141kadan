@@ -1,0 +1,158 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+// 予約画面（モーダル）
+.modal {
+  &-bg{
+    display: none;
+    // display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: #ffffff;
+    opacity: 0.84;
+    // &._active{
+    //   display: block;
+    // }
+  }
+
+  &-container {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 550px;
+    height: 550px;
+    background-color: #ffffff;
+    opacity: 1;
+    // &._active{
+    //   display: block;
+    // }
+  }
+
+  &-close{
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    margin-right: 22px;
+    margin-top: 20px;
+  }
+
+  & .form{
+    &-name {
+      margin-bottom: 4.375rem;
+      & label {
+        display: block;
+        width: fit-content;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.875rem;
+      }
+      & input {
+        border-radius: 3px;
+        background-color: #eefbfb;
+        width: 80%;
+        height: 2rem;
+      }
+    }
+  
+    &-email {
+      margin-bottom: 3.375rem;
+      & label {
+        display: block;
+        width: fit-content;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 1.875rem;
+      }
+      & input {
+        border-radius: 3px;
+        background-color: #eefbfb;
+        width: 80%;
+        height: 2rem;
+      }
+    }
+  
+    &-textarea {
+      margin-bottom: 2rem;
+      & label {
+        display: block;
+        width: fit-content;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 2.75rem;
+      }
+      & input {
+        border-radius: 3px;
+        background-color: #eefbfb;
+        width: 70%;
+      }
+      & textarea {
+        width: 100%;
+        min-height: 180px;
+        border-radius: 3px;
+        background-color: #eefbfb;
+        @include mixin.pad{
+        min-height: 130px;
+        }
+        @include mixin.mobile{
+        min-height: 100px;
+        }
+      }
+    }
+  
+    & label._must::after {
+      content: "必須";
+      font-size: 0.875rem;
+      color: #fff;
+      padding: 6px 16px 6px;
+      background-color: #0c449b;
+      border-radius: 10px;
+      margin-left: 26px;
+    }
+  
+    &-checkbox {
+      white-space: nowrap;
+      text-align: center;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 30px;
+      & input{
+        transform: scale(1.5);
+        margin-right: 5px;
+      }
+    }
+  
+    &-btn {
+      text-align: center;
+    }
+    &-submit {
+      @include mixin.btn;
+      padding-right: 48px;
+      padding-left: 48px;
+      opacity: 1;
+      transition: 0.3s;
+      &._disabled{
+        opacity: 0.4;
+        }
+    }
+  
+  
+    &-end{
+      text-align: center;
+      display: none;
+      position: relative;
+    }
+  
+    &-false{
+      text-align: center;
+      display: none;
+    }
+  }
+
+}

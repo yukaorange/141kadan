@@ -1,0 +1,73 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+/* ===============================================
+# / スマホ用メニュー
+=============================================== */
+.mobile {
+  &-bg {
+    display: none;
+    background-image: url(../images/plan-bg.png);
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto auto;
+    position: fixed;
+    z-index: 400;
+    height: 100vh;
+    width: 100%;
+  }
+
+  // スマホ用メニュー内トグルボタン
+  &-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    // ボタン三本線
+    & .toggle-btn {
+      @include mixin.toggleBtn;
+    }
+    &::after {
+      position: absolute;
+      top: 55px;
+      left: 21px;
+      content: "閉じる";
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+  }
+
+  &-links {
+    display: none;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: #ffffff;
+  }
+}
+
+// スクロール時に上から降りてくるヘッダー(sub header)
+.sh {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  display: none;
+  &._active {
+    @include mixin.fadeIn;
+    display: block;
+  }
+  &._inactive {
+    @include mixin.fadeOut;
+    display: block;
+  }
+}

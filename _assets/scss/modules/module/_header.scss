@@ -1,0 +1,93 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+/* ===============================================
+# ヘッダー
+=============================================== */
+.header {
+  $sec: ".header";
+  position: relative;
+
+  &-container {
+    max-width: 1980px;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    padding: 17px 0 20px 20px;
+    a {
+      display: block;
+      max-width: 200px;
+    }
+  }
+
+  &-links {
+    display: flex;
+    margin-left: 120px;
+    @include mixin.mobile {
+      display: none;
+    }
+  }
+
+  &-link {
+    color: #ffffff;
+    &:nth-of-type(n + 2) {
+      margin-left: 2rem;
+    }
+  }
+
+  // お問い合わせボタンのデザイン
+  &-btn {
+    display: block;
+    color: #ffffff;
+    padding: 17px 37px 17px 69px;
+    margin: 13px 20px 13px;
+    background-color: #978f10;
+    position: relative;
+    @include mixin.mobile {
+      display: none;
+    }
+    &:before {
+      position: absolute;
+      top: 16px;
+      left: 40px;
+      content: "";
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      vertical-align: middle;
+      background-image: url(../images/header-btn-icon.png);
+      background-position: 0 0;
+      background-size: contain;
+    }
+  }
+
+  // ヘッダーのトグルボタン
+  &-toggle {
+    // mobile以外非表示
+    display: none;
+    // mobile時
+    @include mixin.mobile {
+      display: block;
+      padding: 20px;
+      cursor: pointer;
+      & .toggle-btn {
+        @include mixin.toggleBtn;
+      }
+    }
+  }
+}
+

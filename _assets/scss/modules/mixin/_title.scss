@@ -1,0 +1,16 @@
+@use "../variables/variables";
+
+// 共通タイトル
+@mixin common-title {
+  text-align: center;
+
+  ::before {
+    content: "";
+    background-image: url(../images/common-title-logo.png);
+    background-size: contain;
+    display: block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+  }
+}

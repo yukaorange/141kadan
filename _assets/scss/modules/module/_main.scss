@@ -1,0 +1,24 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+html{
+  
+  @include mixin.pad {
+    font-size: 14px;
+  }
+  @include mixin.mobile {
+    font-size: 13.5px;
+  }
+}
+
+body {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  // 画面横スクロール禁止
+  overflow-x: hidden;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}

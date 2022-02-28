@@ -1,0 +1,11 @@
+@use"../variables/variables";
+
+
+@mixin container{
+  width: 100%;
+  //1180px + 32px(padding)
+  max-width: 1212px;
+  padding: 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}

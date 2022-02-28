@@ -1,0 +1,51 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+.concept {
+  background-image: url(../images/concept-bg.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto auto;
+
+  &-container{
+    @include mixin.container;
+    padding-top: 3.6rem;
+    padding-bottom: 7rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &-title{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-right:10% ;
+    font-size: 1.75rem;
+    & span{
+      display: block;
+      margin-top: 7rem;
+      margin-right: 2rem;
+    }
+  }
+
+  &-textbox{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-right: 8%;
+    margin-top: 7rem;
+  }
+
+  &-text{
+    // 文字サイズ+行間22px
+    line-height: 2.375;
+
+  }
+
+  &-sign{
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-right: 8%;
+    text-align:right;
+  }
+
+  
+}

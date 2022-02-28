@@ -1,0 +1,30 @@
+@use"../variables/variables";
+
+/* ===============================================
+# メディアクエリ
+=============================================== */
+
+@mixin mobile{
+  @media screen and (max-width:variables.$mobile){
+    @content;
+  }
+}
+
+@mixin pad{
+  @media screen and (max-width:variables.$pad){
+    @content;
+  }
+}
+
+@mixin pc{
+  @media screen and (max-width:variables.$pc){
+    @content;
+  }
+}
+
+@mixin touch{
+  @media (hover: none){
+    /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
+    @content;
+    }
+}
