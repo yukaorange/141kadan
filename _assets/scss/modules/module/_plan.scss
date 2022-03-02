@@ -1,0 +1,45 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+.plan {
+  $sec:".plan";
+  background-image: url(../images/plan-bg.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto auto;
+
+  &-container{
+    @include mixin.container;
+    padding-top: 6.625rem;
+    padding-bottom: 4.875rem;
+  }
+
+  &-title{
+    @include mixin.common-title;
+    margin-bottom: 3.8125rem;
+  }
+
+  &-list{
+    display: flex;
+    gap:7.96%;
+  }
+
+  &-image{
+    margin-bottom: 1.75rem;
+  }
+
+  &-text{
+    //行間32px
+    line-height: 2;
+    margin-bottom: 4.5625rem;
+
+    &._concept{
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &-btn{
+    @include mixin.menu-btn;
+  }
+}
+

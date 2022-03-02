@@ -1,0 +1,96 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+.news {
+  $sec: ".news";
+  background-color: #ffffff;
+
+  &-container {
+    @include mixin.container;
+    padding-top: 6.625rem;
+    padding-bottom: 4.875rem;
+  }
+
+  &-title {
+    @include mixin.common-title;
+    margin-bottom: 3.8125rem;
+  }
+
+  &-tablist {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 50px;
+  }
+
+  &-tab {
+    position: relative;
+    @include mixin.cursor;
+    // 選択できるタブにアンダーライン
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      background-color: #707070;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    &._selected {
+      &::after {
+        content: "";
+        display: none;
+      }
+      // 選択されているタブはデフォルトカーソル
+      cursor: default;
+      opacity: 1;
+    }
+  }
+
+  &-list {
+    display: none;
+
+    &._selected {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include mixin.tabSelect;
+    }
+  }
+
+  &-item {
+    padding: 15px 0 15px 10px;
+    background-color: #f6f6f6;
+    width: 48%;
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+
+  &-image {
+    width: 103px;
+    height: 100px;
+  }
+
+  &-textbox {
+    margin-left: 1.875rem;
+    flex: 1;
+  }
+
+  &-date {
+    margin-bottom: 5px;
+  }
+
+  &-text {
+    //行間32px
+    line-height: 2;
+
+    &._concept {
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &-btn {
+    @include mixin.menu-btn;
+  }
+}

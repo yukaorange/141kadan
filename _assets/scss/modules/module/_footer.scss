@@ -5,34 +5,62 @@
 #フッター
 =============================================== */
 .footer {
+  background-image: url(../images/footer-bg.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: auto auto;
+
   &-container {
     @include mixin.container;
-    background-color: #f8f8f8;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 
-  &-title {
+  &-list{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2.125rem;
+    margin-bottom: 2rem;
+  }
+
+  &-link{
+    writing-mode: vertical-rl;
+  }
+
+  &-logo {
+    width: 145px;
     margin-bottom: 24px;
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  &-caution {
+  &-access{
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-bottom: 54px;
-    @include mixin.pad {
-      gap: 20px;
-    }
   }
 
-  &-text {
-    margin-bottom: 60px;
+  &-address:nth-child(2){
+    margin-left: 1rem;
   }
 
-  &-copy {
-    font-size: 0.875rem;
+
+  &-tel{
+    display: flex;
+    justify-content: center;
+  }
+
+  &-fax{
+    margin-left: 1.3125rem;
+  }
+  
+  &-copy{
+    // 最低フォントサイズで固定
+    font-size: 12px;
     text-align: center;
+    color: #ffffff;
+    background-color: #000000;
+    padding-top: 21px;
+    padding-bottom: 23px;
   }
 }

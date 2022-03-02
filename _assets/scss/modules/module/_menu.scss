@@ -1,0 +1,56 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+.menu {
+  $sec:".menu";
+  background-color: #ffffff;
+  max-width: 1980px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &-container{
+    padding-top: 6.625rem;
+    padding-bottom: 4.875rem;
+  }
+
+  &-item{
+    display: flex;
+    // 奇数番目のメニューは左に画像配置
+    &:nth-of-type(odd){
+      & #{$sec}-textbox{
+        margin-left: 8.5rem;
+      }
+    }
+    // 偶数番目のメニューは右に画像配置
+    &:nth-of-type(even){
+      flex-direction: row-reverse;
+      & #{$sec}-textbox{
+        margin-right: 13.5rem;
+      }
+    }
+    &:not(:last-child){
+      margin-bottom: 7.625rem;
+    }
+  }
+
+  &-image{
+    width: 53%;
+  }
+
+  &-title{
+    //行間62px
+    line-height: 1.7;
+    margin-bottom: 4.1875rem;
+  }
+
+  &-text{
+    //行間32px
+    line-height: 2;
+    margin-bottom: 4.5625rem;
+  }
+
+  &-btn{
+    @include mixin.menu-btn;
+  }
+}
+

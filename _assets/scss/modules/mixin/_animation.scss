@@ -53,3 +53,15 @@
     }
   }
 }
+
+@mixin tabSelect {
+  animation: tabSelect 0.3s ease-in 0s forwards;
+  @keyframes tabSelect{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+}

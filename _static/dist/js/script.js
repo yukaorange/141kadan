@@ -5,33 +5,38 @@ $(function () {
   AOS.init({
     delay: 100,
   });
-   //===========================
+  //===========================
   // スクロールでサブヘッダー表示
   //===========================
   $(window).scroll(function () {
-    let height = 150;
+    // 閾値
+    let height = 200;
+    // スクロール値を変数に代入
     let scroll = $(this).scrollTop();
+    // 閾値とスクロール値を比較し、処理分岐
     if (scroll >= height) {
       $(".sh").addClass("_active");
       $(".sh").removeClass("_inactive");
     } else {
       $(".sh").removeClass("_active");
       $(".sh").addClass("_inactive");
-    };
-  }
-  );
+    }
+  });
   //===========================
   //トグルボタン/スマホメニュー
   //===========================
   $(".header-toggle,.sh-toggle,.mobile-toggle").click(function () {
+    // 各所のトグルボタンをクリック(OPEN)
     toggleBtn();
     slideOpen();
   });
   $(".mobile-toggle").click(function () {
+    // モバイル時のトグルボタンクリック(CLOSE)
     toggleBtn();
     slideClose();
   });
   $(".mobile-bg").click(function () {
+    // モバイル時のスライド背景クリック時(CLOSE)
     toggleBtn();
     slideClose();
   });
@@ -40,66 +45,66 @@ $(function () {
     $(".toggle-btn").toggleClass("_active");
   }
 
-  function slideOpen(){
+  function slideOpen() {
     $(".mobile-bg").fadeIn();
     $(".mobile-links").fadeIn();
   }
 
-  function slideClose(){
+  function slideClose() {
     $(".mobile-bg").fadeOut();
     $(".mobile-links").fadeOut();
   }
-  
-  
+
   // //===========================
   // //モーダル表示・非表示
   // //===========================
   $("._reserve").click(function () {
+    // 予約ボタンクリックでモーダル起動
     ModalOpen();
     return false;
   });
-  $(".modal-bg").click(function(){
+  $(".modal-bg").click(function () {
+    // 背景クリックでモーダル閉じ
     ModalClose();
   });
-  $(".modal-close").click(function(){
+  $(".modal-close").click(function () {
     ModalClose();
   });
 
-  function ModalOpen(){
+  function ModalOpen() {
     $(".modal-bg").fadeIn();
     $(".modal-container").fadeIn();
     $("body").addClass("no-scroll");
   }
 
-  function ModalClose(){
+  function ModalClose() {
     $(".modal-bg").fadeOut();
     $(".modal-container").fadeOut();
     $("body").removeClass("no-scroll");
   }
 
-
   //===========================
   //フォーム バリデーション
   //===========================
-  const submit = $('.form-submit')
-  $('#form input,#form textarea').change(function () {
+  const submit = $(".form-submit");
+  $("#form input,#form textarea").change(function () {
     if (
       $('#form input[type="text"]').val() !== "" &&
       $('#form input[type="email"]').val() !== "" &&
-      $('#form input[type="checkbox"]').prop('checked') === true
+      $('#form input[type="checkbox"]').prop("checked") === true
     ) {
-      submit.prop('disabled', false);
-      submit.removeClass("_disabled")
+      submit.prop("disabled", false);
+      submit.removeClass("_disabled");
     } else {
-      submit.prop('disabled', true);
-      submit.addClass("_disabled")
+      submit.prop("disabled", true);
+      submit.addClass("_disabled");
     }
   });
   //===========================
   //フォーム送信後
   //===========================
-  $('#form').submit(function (event) {
-    let formData = $('#form').serialize();
+  $("#form").submit(function (event) {
+    let formData = $("#form").serialize();
     $.ajax({
       url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdcjB0dM0azTJw7OvQjlIggXRUyCJlHBThMlROYHAjcYPtoYg/formResponse",
       data: formData,
@@ -112,18 +117,26 @@ $(function () {
         },
         200: function () {
           $(".form-false").slideDown();
-        }
-      }
+        },
+      },
     });
     event.preventDefault();
   });
+  //===========================
+  //タブ切り替え
+  //===========================
+  
+  $(".news-tab").click(function () {
+    // クリックされたタブの順番（0はじまり）を変数に格納
+    var index = $(".news-tab").index(this);
 
+    //タブのcssのを一旦削除
+    $(".news-tab").removeClass("_selected");
 
+    //クリックされたタブにクリック済みcssを適用する
+    $(this).addClass("_selected");
 
-
-
+    //コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
+    $(".news-list").removeClass("_selected").eq(index).addClass("_selected");
+  });
 });
-
-
-
-
