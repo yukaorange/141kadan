@@ -1,0 +1,45 @@
+@use "../../../variables/variables";
+@use "../../../mixin/mixin";
+
+.desc {
+  $sec: "desc";
+
+  &-container {
+    @include mixin.container;
+  }
+
+  &-title{
+    font-size: 1.625rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &-list{
+    padding: 0 12.7% 0 12.7%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 6.03125rem;
+  }
+
+  &-term{
+    width: 25%; 
+    font-size: 0.9375rem;
+    border-top: 1px solid #e7e7e7;
+    &:last-of-type{
+      border-bottom: 1px solid #e7e7e7;
+    }
+  }
+
+  &-desc{
+    width: 75%; 
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    border-top: 1px solid #e7e7e7;
+    &:last-of-type{
+      border-bottom: 1px solid #e7e7e7;
+    }
+  }
+
+
+
+}

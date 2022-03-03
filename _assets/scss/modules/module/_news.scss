@@ -2,7 +2,7 @@
 @use "../mixin/mixin";
 
 .news {
-  $sec: ".news";
+  $sec: "news";
   background-color: #ffffff;
 
   &-container {

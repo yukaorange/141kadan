@@ -2,7 +2,7 @@
 @use "../mixin/mixin";
 
 .menu {
-  $sec:".menu";
+  $sec:"menu";
   background-color: #ffffff;
   max-width: 1980px;
   margin-left: auto;
@@ -17,14 +17,14 @@
     display: flex;
     // 奇数番目のメニューは左に画像配置
     &:nth-of-type(odd){
-      & #{$sec}-textbox{
+      & .#{$sec}-textbox{
         margin-left: 8.5rem;
       }
     }
     // 偶数番目のメニューは右に画像配置
     &:nth-of-type(even){
       flex-direction: row-reverse;
-      & #{$sec}-textbox{
+      & .#{$sec}-textbox{
         margin-right: 13.5rem;
       }
     }

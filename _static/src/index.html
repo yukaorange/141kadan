@@ -70,116 +70,116 @@
       </div>
     </header>
 
+    <!-- スマホ用スライドメニュー-->
+    <div class="mobile">
+      <div class="mobile-bg">
+        <div class="mobile-toggle">
+          <button class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-links">
+        <ul class="mobile-linkbox">
+          <li class="mobile-link"><a href="pages/service.html">お部屋</a></li>
+          <li class="mobile-link"><a href="pages/course.html">お料理</a></li>
+          <li class="mobile-link"><a href="pages/feature.html">温泉</a></li>
+        </ul>
+        <a href="#" class="mobile-btn _reserve">宿泊予約</a>
+      </div>
+      <!-- 予約ボタン -->
+    </div>
+    
+    <!-- スクロール時に表示するサブヘッダー(sub header) -->
+    <div class="sh _inactive">
+      <div class="sh-container">
+        <!-- subヘッダーナビ -->
+        <nav class="sh-nav">
+          <!-- subヘッダーロゴ -->
+          <figure class="sh-logo">
+            <a href="#">
+              <img src="images/header-logo2.png" alt="石井花壇のロゴ" />
+            </a>
+          </figure>
+          <!-- リンク -->
+          <di class="sh-links">
+            <li class="sh-link"><a href="pages/service.html">お部屋</a></li>
+            <li class="sh-link"><a href="pages/course.html">お料理</a></li>
+            <li class="sh-link"><a href="pages/feature.html">温泉</a></li>
+          </di>
+        </nav>
+        <!-- 予約ボタン -->
+        <a href="#" class="sh-btn _reserve">宿泊予約</a>
+        <!-- スマホ用トグルボタン -->
+        <div class="sh-toggle">
+          <button class="toggle-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- モーダルウインドウ（予約画面） -->
+    <div class="modal" id="modal">
+      <div class="modal-bg"></div>
+      <div class="modal-container">
+        <!-- 閉じるボタン -->
+        <figure class="modal-close">
+          <img src="images/modal-close.png" alt="閉じるボタン" />
+        </figure>
+        <h1 class="modal-title">宿泊予約</h1>
+        <!-- フォーム -->
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeM_YTBAYQ4JQECgPrI8Fn-qBmCmbz7Tgn4gPpxFl1UDC2OZg/formResponse" class="form" id="form">
+            <div class="form-name">
+              <!-- 氏名 -->
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="entry.747914271" placeholder="例：石井　花壇" required />
+            </div>
+            <!-- メールアドレス -->
+            <div class="form-email">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="entry.1574196328" placeholder="例：Example@example.com" required />
+            </div>
+            <div class="form-plan">
+              <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
+              <!-- プラン選択 -->
+              <select class="form-select" id="plan" name="entry.1288299959"  required>
+                <option value="" disabled selected style="display:none;">プランを選択してください</option>
+                <option value="【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                <option value="平日に優雅に楽しむ、特別宿泊プラン">平日に優雅に楽しむ、特別宿泊プラン</option>
+                <option value="絶景貸切露天と個室会席を満喫できるファミリープラン">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+              </select>
+            </div>
+            <div class="form-date">
+              <label for="flatpicker">日時選択</label>
+              <!-- flatpickerカレンダー -->
+              <input
+                class="flatpickr"
+                id="flatpickr"
+                type="text"
+                placeholder="日時を選択してください"
+                readonly="readonly"
+                name="entry.1591030668"
+                required
+              />
+            </div>
+            <div class="form-btn">
+              <button type="submit" class="form-submit _disabled" disabled>
+                送信する
+              </button>
+            </div>
+            <p class="form-end">ご予約ありがとうございます。</p>
+            <p class="form-false">予約受付できませんせした。</p>
+        </form>
+      </div>
+    </div>
+  
     <!-- メイン -->
     <main class="main">
-      <!-- スマホ用スライドメニュー-->
-      <div class="mobile">
-        <div class="mobile-bg">
-          <div class="mobile-toggle">
-            <button class="toggle-btn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-        <div class="mobile-links">
-          <ul class="mobile-linkbox">
-            <li class="mobile-link"><a href="#">お部屋</a></li>
-            <li class="mobile-link"><a href="#">お料理</a></li>
-            <li class="mobile-link"><a href="#">温泉</a></li>
-          </ul>
-          <a href="#" class="mobile-btn _reserve">宿泊予約</a>
-        </div>
-        <!-- 予約ボタン -->
-      </div>
-
-      <!-- スクロール時に表示するサブヘッダー(sub header) -->
-      <div class="sh _inactive">
-        <div class="sh-container">
-          <!-- subヘッダーナビ -->
-          <nav class="sh-nav">
-            <!-- subヘッダーロゴ -->
-            <figure class="sh-logo">
-              <a href="#">
-                <img src="images/header-logo2.png" alt="石井花壇のロゴ" />
-              </a>
-            </figure>
-            <!-- リンク -->
-            <di class="sh-links">
-              <li class="sh-link"><a href="#">お部屋</a></li>
-              <li class="sh-link"><a href="#">お料理</a></li>
-              <li class="sh-link"><a href="#">温泉</a></li>
-            </di>
-          </nav>
-          <!-- 予約ボタン -->
-          <a href="#" class="sh-btn _reserve">宿泊予約</a>
-          <!-- スマホ用トグルボタン -->
-          <div class="sh-toggle">
-            <button class="toggle-btn">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- モーダルウインドウ（予約画面） -->
-      <div class="modal" id="modal">
-        <div class="modal-bg"></div>
-        <div class="modal-container">
-          <!-- 閉じるボタン -->
-          <figure class="modal-close">
-            <img src="images/modal-close.png" alt="閉じるボタン" />
-          </figure>
-          <h1 class="modal-title">宿泊予約</h1>
-          <!-- フォーム -->
-          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeM_YTBAYQ4JQECgPrI8Fn-qBmCmbz7Tgn4gPpxFl1UDC2OZg/formResponse" class="form" id="form">
-              <div class="form-name">
-                <!-- 氏名 -->
-                <label for="name">お名前</label>
-                <input type="text" id="name" name="entry.747914271" placeholder="例：石井　花壇" required />
-              </div>
-              <!-- メールアドレス -->
-              <div class="form-email">
-                <label for="email">メールアドレス</label>
-                <input type="email" id="email" name="entry.1574196328" placeholder="例：Example@example.com" required />
-              </div>
-              <div class="form-plan">
-                <label for="plan">ご希望プラン（空いているプランのみ表示されます）</label>
-                <!-- プラン選択 -->
-                <select class="form-select" id="plan" name="entry.1288299959"  required>
-                  <option value="" disabled selected style="display:none;">プランを選択してください</option>
-                  <option value="【期間限定】海辺の四季旬彩、贅沢美味懐石プラン">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-                  <option value="平日に優雅に楽しむ、特別宿泊プラン">平日に優雅に楽しむ、特別宿泊プラン</option>
-                  <option value="絶景貸切露天と個室会席を満喫できるファミリープラン">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
-                </select>
-              </div>
-              <div class="form-date">
-                <label for="flatpicker">日時選択</label>
-                <!-- flatpickerカレンダー -->
-                <input
-                  class="flatpickr"
-                  id="flatpickr"
-                  type="text"
-                  placeholder="日時を選択してください"
-                  readonly="readonly"
-                  name="entry.1591030668"
-                  required
-                />
-              </div>
-              <div class="form-btn">
-                <button type="submit" class="form-submit _disabled" disabled>
-                  送信する
-                </button>
-              </div>
-              <p class="form-end">ご予約ありがとうございます。</p>
-              <p class="form-false">予約受付できませんせした。</p>
-          </form>
-        </div>
-      </div>
-
       <!-- ファーストビュー（FirstView） -->
       <section class="fv">
         <div class="fv-container">
@@ -198,7 +198,7 @@
       </section>
 
       <!-- コンセプト（concept） -->
-      <section id="concept" class="concept">
+      <section class="concept">
         <div class="concept-container">
           <!-- 見出し -->
           <h1 class="concept-title">
@@ -238,7 +238,7 @@
       </section>
 
       <!-- メニュー（menu） -->
-      <section id="menu" class="menu">
+      <section class="menu">
         <div class="menu-container">
           <ul class="menu-list">
             <!-- メニュー1 -->
@@ -253,7 +253,7 @@
                 <p class="menu-text">
                   まるで時が止まったかのような、圧倒的な静寂のなかで、<br />ひたすらにゆったりと…。<br />最高級の「何もしない時間」をお過ごしください。
                 </p>
-                <a href="#" class="menu-btn">お部屋について</a>
+                <a href="pages/service.html" class="menu-btn">お部屋について</a>
               </div>
             </li>
             <!-- メニュー2 -->
@@ -266,7 +266,7 @@
                 <p class="menu-text">
                   最も旬の食材を愉しむ、最高の贅沢を<br />最高級A5ランクの米沢牛と共に頂く。<br />あなたの人生史に残る「極上の感動」を<br />お約束します。
                 </p>
-                <a href="#" class="menu-btn">料理について</a>
+                <a href="pages/course.html" class="menu-btn">料理について</a>
               </div>
             </li>
             <!-- メニュー3 -->
@@ -281,7 +281,7 @@
                 <p class="menu-text">
                   最も旬の食材を愉しむ、最高の贅沢を<br />最高級A5ランクの米沢牛と共に頂く。<br />あなたの人生史に残る「極上の感動」を<br />お約束します。
                 </p>
-                <a href="#" class="menu-btn">温泉について</a>
+                <a href="pages/feature.html" class="menu-btn">温泉について</a>
               </div>
             </li>
           </ul>
@@ -289,7 +289,7 @@
       </section>
 
       <!-- プラン（plan） -->
-      <section id="plan" class="plan">
+      <section class="plan">
         <div class="plan-container">
           <h1 class="plan-title">おすすめご宿泊プラン</h1>
           <ul class="plan-list">
@@ -535,13 +535,13 @@
       <div class="footer-container">
         <ul class="footer-list">
           <li class="footer-link">
-            <a href="#">お部屋</a>
+            <a href="pages/service.html">お部屋</a>
           </li>
           <li class="footer-link">
-            <a href="#">お料理</a>
+            <a href="pages/course.html">お料理</a>
           </li>
           <li class="footer-link">
-            <a href="#">温泉</a>
+            <a href="pages/feature.html">温泉</a>
           </li>
         </ul>
         <figure class="footer-logo">
