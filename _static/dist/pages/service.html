@@ -30,8 +30,8 @@
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
     <link rel="stylesheet" href="../css/style.css" />
-    <!-- featureページ独自css読み込み -->
-    <link rel="stylesheet" href="../css/modules/page/feature/style.css" />
+    <!-- serviceページ独自css読み込み -->
+    <link rel="stylesheet" href="../css/modules/page/service/style.css" />
     <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
     <meta name="title" content="石井花壇 | 温海温泉旅館【公式サイト】" />
     <meta
@@ -69,9 +69,9 @@
           </figure>
           <!-- リンク -->
           <ul class="ph-links">
-            <li class="ph-link"><a href="#">お部屋</a></li>
-            <li class="ph-link"><a href="#">お料理</a></li>
-            <li class="ph-link"><a href="#">温泉</a></li>
+            <li class="ph-link"><a href="../pages/service.html">お部屋</a></li>
+            <li class="ph-link"><a href="../pages/service.html">お料理</a></li>
+            <li class="ph-link"><a href="../pages/feature.html">温泉</a></li>
           </ul>
         </nav>
         <!-- 予約ボタン -->
@@ -99,9 +99,11 @@
       </div>
       <div class="mobile-links">
         <ul class="mobile-linkbox">
-          <li class="mobile-link"><a href="#">お部屋</a></li>
-          <li class="mobile-link"><a href="#">お料理</a></li>
-          <li class="mobile-link"><a href="#">温泉</a></li>
+          <li class="mobile-link">
+            <a href="../pages/service.html">お部屋</a>
+          </li>
+          <li class="mobile-link"><a href="../pages/course.html">お料理</a></li>
+          <li class="mobile-link"><a href="../pages/feature.html">温泉</a></li>
         </ul>
         <a href="#" class="mobile-btn _reserve">宿泊予約</a>
       </div>
@@ -200,75 +202,83 @@
       <!-- トップビュー（top） -->
       <section class="top">
         <div class="top-container">
-          <p class="top-text">温泉</p>
+          <p class="top-text">お部屋</p>
         </div>
       </section>
 
-      
       <!-- コンテンツ（content） -->
       <section id="content" class="content">
         <div class="content-container">
-        <!-- パンくずリスト -->
-        <nav class="content-nav">
-          <ul class="content-breadcrumb">
-            <li class="content-link"><a href="../index.html">トップ</a></li>
-            <li class="content-link"><a href="#">温泉</a></li>
-          </ul>
-        </nav>
-  
-        <!-- メッセージ -->
-        <p class="content-message">
-          心も身体も癒やす汐の温泉。<br />
-          湯あたりしにくく、赤ちゃんから年配の方までどなたでもゆっくりと安心して入っていただけます。<br />
-          柔らかく優しい湯にじっくりと漬かれば、心身共にリラックスできます。
-        </p>
-        
+          <!-- パンくずリスト -->
+          <nav class="content-nav">
+            <ul class="content-breadcrumb">
+              <li class="content-link"><a href="../index.html">トップ</a></li>
+              <li class="content-link">
+                <a href="../pages/service.html">お部屋</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- メッセージ -->
+          <p class="content-message">
+            創業より受け継がれてきた石井花壇の和の造り<br />
+            温海の雄大な絶景を堪能していただけるように設計された客室<br />
+            ゆるやかに流れ行く時間に身を委ねて
+          </p>
+
           <ul class="content-list">
             <!-- コンテンツ1 -->
             <li class="content-item">
               <figure class="content-image">
-                <img src="../images/feature-image1.png" alt="" />
+                <img src="../images/service-image1.png" alt="" />
               </figure>
               <div class="content-textbox">
-                <h2 class="content-title">貸し切り露天風呂「雲居の湯」</h2>
+                <h2 class="content-title">温泉付き客室</h2>
                 <p class="content-text">
-                  弱酸性の湯質が優しく肌を包み込むような心地よさ<br />
-                  最上階の露天風呂「雲居の湯」では、湯冷めしにくい食塩泉を<br />
-                  熱海の町並みを遠方に望みながら・・・
+                  温海の源泉かけ流し露天風呂付き客室になります。<br />
+                  あなただけの上質な安らぎのひとときを。
+                </p>
+                <p class="content-text _notice">
+                  ＊部屋数に限りがございます。<br />
+                  ＊洗い場はないため、お体を先に大浴場でお流しになって頂く必要があります。
                 </p>
               </div>
             </li>
             <!-- コンテンツ2 -->
             <li class="content-item">
               <figure class="content-image">
-                <img src="../images/feature-image2.png" alt="" />
+                <img src="../images/service-image2.png" alt="" />
               </figure>
               <div class="content-textbox">
-                <h2 class="content-title">美肌を促す乳白色の硫黄泉を</h2>
+                <h2 class="content-title">庭園付き客室</h2>
                 <p class="content-text">
-                  まじりっけなしの白いにごり湯。鳥海山から引いた酸性の強い硫酸塩泉を、<br />
-                  たっぷりと掛け流しています。<br />
-                  四季の移り変わりを、天然温泉の湯に浸りながら味わってください。
+                  庭園付きの客室になります。<br />
+                  お庭を見ながら、ほっとするひとときをお過ごしください。
+                </p>
+                <p class="content-text _notice">
+                  ＊お庭は複数のお客様と囲む形になります。<br />
+                  ＊部屋数に限りがあります。<br />
+                  ＊ご希望の方は「お抹茶/500円」をルームサービスさせていただきます。
+                </p>
+              </div>
+            </li>
+            <!-- コンテンツ3 -->
+            <li class="content-item">
+              <figure class="content-image">
+                <img src="../images/service-image3.png" alt="" />
+              </figure>
+              <div class="content-textbox">
+                <h2 class="content-title">一般客室</h2>
+                <p class="content-text">
+                  最もベーシックな客室になります。伝統の中にモダンさを取り入れた<br />
+                  内装となっており、とても過ごしやすくしていただけます。
+                </p>
+                <p class="content-text _notice">
+                  ＊全室お部屋より日本海を望むことができます。
                 </p>
               </div>
             </li>
           </ul>
-        </div>
-      </section>
-      <!-- 効能（description） -->
-      <section class="desc">
-        <div class="desc-container">
-          <h1 class="desc-title">温泉の効能</h1>
-          <!-- 効能表 -->
-          <dl class="desc-list">
-            <dt class="desc-term">効能</dt>
-            <dd class="desc-desc">神経痛・慢性関節リューマチ・腰痛・冷え性・慢性婦人病・うちみなど</dd>
-            <dt class="desc-term">泉質</dt>
-            <dd class="desc-desc">ナトリウム・カルシウム-塩化物泉</dd>
-            <dt class="desc-term">飲用効果</dt>
-            <dd class="desc-desc">弱塩化物泉は肌にやわらかなため、高齢者や病後の回復期によく、飲用すれば慢性便秘や慢性消化
-              <br>器病に効果があります。</dd>
-          </dl>
         </div>
       </section>
     </main>
@@ -289,10 +299,7 @@
         </ul>
         <figure class="footer-logo">
           <a href="#">
-            <img
-              src="../images/footer-logo.png"
-              alt="石井花壇のロゴ"
-            />
+            <img src="../images/footer-logo.png" alt="石井花壇のロゴ" />
           </a>
         </figure>
         <div class="footer-access">

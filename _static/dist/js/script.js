@@ -1,6 +1,5 @@
 $(function () {
   // 日付選択カレンダー
-
   // 選択可能日（始期）を設定
   let minDate = new Date();
   minDate = minDate.setDate(minDate.getDate());
