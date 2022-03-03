@@ -40,6 +40,7 @@
     }
   }
 
+  // 各リンク
   &-links {
     display: none;
     position: fixed;
@@ -48,26 +49,50 @@
     bottom: 0;
     left: 0;
     right: 0;
-    width: 50%;
-    height: 50%;
+    width: 90%;
+    height: 70%;
     margin: auto;
     text-align: center;
-    background-color: #ffffff;
   }
-}
 
-// スクロール時に上から降りてくるヘッダー(sub header)
-.sh {
-  position: fixed;
-  width: 100%;
-  background-color: #ffffff;
-  display: none;
-  &._active {
-    @include mixin.fadeIn;
-    display: block;
+  &-linkbox {
+    margin-bottom: 2rem;
   }
-  &._inactive {
-    @include mixin.fadeOut;
-    display: block;
+
+  &-link {
+    & a {
+      display: block;
+      padding: 40px 0 40px;
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+
+    &:nth-child(1) {
+      background-image: url(../images/service-image1.png);
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 10px 10px 0px 0px;
+    }
+    &:nth-child(2) {
+      background-image: url(../images/plan-image3.png);
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    &:nth-child(3) {
+      background-image: url(../images/menu-image3.png);
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 0 0 10px 10px;
+    }
+  }
+
+  &-btn{
+    @include mixin.btn;
+    background-color: #978f10;
+    padding: 17px 0 17px;
+    border-radius: 10px;
   }
 }

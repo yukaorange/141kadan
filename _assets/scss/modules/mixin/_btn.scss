@@ -1,50 +1,53 @@
-@use"../variables/variables";
+@use "../variables/variables";
 
 // トグルボタン三本線のレイアウト
-@mixin toggleBtn{
-    position: relative;
-    width: 40px;
-    height: 30px;
+@mixin toggleBtn {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  & span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    // 線の色は配置先で指定
+    // background-color: #ffffff;
+    border-radius: 4px;
+    transition: all 0.4s;
+    &:nth-of-type(1) {
+      top: 0;
+    }
+    &:nth-of-type(2) {
+      top: calc(50% - 1px);
+    }
+    &:nth-of-type(3) {
+      bottom: 0;
+    }
+  }
+  &._active {
     & span {
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: #ffffff;
-      border-radius: 4px;
-      transition: all 0.4s;
+      background-color: #000000;
       &:nth-of-type(1) {
-        top: 0;
+        width: 50%;
+        transform: translate3d(3px, 6px, 0) rotate(45deg);
       }
       &:nth-of-type(2) {
-        top: calc(50% - 1px);
+        transform: translate3d(-1px, 0, 0) rotate(-45deg);
       }
       &:nth-of-type(3) {
-        bottom: 0;
+        width: 51%;
+        transform: translate3d(17px, -7.5px, 0) rotate(45deg);
       }
     }
-    &._active {
-      & span {
-        background-color: #000000;
-        &:nth-of-type(1) {
-          width: 50%;
-          transform: translate3d(3px, 6px, 0) rotate(45deg);
-        }
-        &:nth-of-type(2) {
-          transform: translate3d(-1px, 0, 0) rotate(-45deg);
-        }
-        &:nth-of-type(3) {
-          width: 51%;
-          transform: translate3d(17px, -7.5px, 0) rotate(45deg);
-        }
-      }
-    }
+  }
 }
 
-@mixin btn{
-  width: 10px;
+@mixin btn {
+  display: block;
+  color: #ffffff;
+  padding: 17px 37px 17px 69px;
 }
 
-@mixin menu-btn{
+@mixin menu-btn {
   display: inline-block;
   padding: 17px 61px 18px 44px;
   border: solid 1px #707070;

@@ -2,7 +2,8 @@
 @use "../mixin/mixin";
 
 html{
-  
+  font-size: 16px;
+
   @include mixin.pad {
     font-size: 14px;
   }

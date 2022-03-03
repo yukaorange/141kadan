@@ -1,4 +1,16 @@
 $(function () {
+  // 日付選択カレンダー
+
+  // 選択可能日（始期）を設定
+  let minDate = new Date();
+  minDate = minDate.setDate(minDate.getDate());
+
+  flatpickr("#flatpickr", {
+    locale: "ja", //日本語化
+    dateFormat  : 'Y.m.d（D）',//フォーマット
+    minDate     : minDate,//選択可能始期
+    mode: "range",
+  });
   //===========================
   //aos
   //===========================
@@ -25,7 +37,7 @@ $(function () {
   //===========================
   //トグルボタン/スマホメニュー
   //===========================
-  $(".header-toggle,.sh-toggle,.mobile-toggle").click(function () {
+  $(".header-toggle,.sh-toggle,.mobile-toggle,.ph-toggle").click(function () {
     // 各所のトグルボタンをクリック(OPEN)
     toggleBtn();
     slideOpen();
@@ -87,26 +99,39 @@ $(function () {
   //フォーム バリデーション
   //===========================
   const submit = $(".form-submit");
-  $("#form input,#form textarea").change(function () {
+  let selected = $('#plan option:selected')
+  $("#form input").change(function () {
     if (
       $('#form input[type="text"]').val() !== "" &&
       $('#form input[type="email"]').val() !== "" &&
-      $('#form input[type="checkbox"]').prop("checked") === true
+      $('.form-date input[type="text"]').val() !== "" &&
+      selected.val() == ""
     ) {
       submit.prop("disabled", false);
       submit.removeClass("_disabled");
-    } else {
+    }
+    else {
       submit.prop("disabled", true);
       submit.addClass("_disabled");
     }
   });
+  // プラットピッカー閉じた時に入力チェック
+  $(".modal-container").click(function(){
+    formcheck();
+  });
+  function formcheck (){
+    if($('.form-date input[type="text"]').val() ==""){
+      submit.prop("disabled", true);
+      submit.addClass("_disabled");
+    }
+  }
   //===========================
   //フォーム送信後
   //===========================
   $("#form").submit(function (event) {
     let formData = $("#form").serialize();
     $.ajax({
-      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdcjB0dM0azTJw7OvQjlIggXRUyCJlHBThMlROYHAjcYPtoYg/formResponse",
+      url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeM_YTBAYQ4JQECgPrI8Fn-qBmCmbz7Tgn4gPpxFl1UDC2OZg/formResponse",
       data: formData,
       type: "POST",
       dataType: "xml",
@@ -125,7 +150,7 @@ $(function () {
   //===========================
   //タブ切り替え
   //===========================
-  
+
   $(".news-tab").click(function () {
     // クリックされたタブの順番（0はじまり）を変数に格納
     var index = $(".news-tab").index(this);

@@ -552,6 +552,10 @@ img {
   display: none;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   width: 100%;
   margin-left: auto;
@@ -660,7 +664,7 @@ body.no-scroll {
   height: 100vh;
   z-index: 1000;
   background-color: #ffffff;
-  opacity: 0.84;
+  opacity: 0.7;
 }
 .modal-container {
   display: none;
@@ -672,119 +676,136 @@ body.no-scroll {
   bottom: 0;
   margin: auto;
   width: 550px;
-  height: 550px;
+  height: 600px;
   background-color: #ffffff;
   opacity: 1;
 }
 .modal-close {
   width: 18px;
   height: 18px;
-  margin-left: auto;
-  margin-right: 22px;
-  margin-top: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.modal-title {
+  text-align: center;
+  margin-top: 1.5625rem;
+  margin-bottom: 1.5625rem;
+  font-size: 1.25rem;
+}
+.modal .form {
+  padding-top: 1.5625rem;
+  margin: 0 3.78125rem;
+  border-top: #E7E7E7 1px solid;
 }
 .modal .form-name {
-  margin-bottom: 4.375rem;
+  margin-bottom: 1.5rem;
 }
 .modal .form-name label {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1.875rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 .modal .form-name input {
-  border-radius: 3px;
-  background-color: #eefbfb;
-  width: 80%;
+  background-color: #ffffff;
+  width: 100%;
   height: 2rem;
+  border: 1px #E7E7E7 solid;
+  padding: 0 0 0 10px;
 }
 .modal .form-email {
-  margin-bottom: 3.375rem;
+  margin-bottom: 1.5rem;
 }
 .modal .form-email label {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 1.875rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
 .modal .form-email input {
-  border-radius: 3px;
-  background-color: #eefbfb;
-  width: 80%;
+  background-color: #ffffff;
+  width: 100%;
   height: 2rem;
+  border: 1px #E7E7E7 solid;
+  padding: 0 0 0 10px;
 }
-.modal .form-textarea {
-  margin-bottom: 2rem;
+.modal .form-date {
+  margin-bottom: 1.5rem;
 }
-.modal .form-textarea label {
+.modal .form-date label {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 2.75rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
-.modal .form-textarea input {
-  border-radius: 3px;
-  background-color: #eefbfb;
-  width: 70%;
-}
-.modal .form-textarea textarea {
+.modal .form-date input {
+  background-color: #ffffff;
   width: 100%;
-  min-height: 180px;
-  border-radius: 3px;
-  background-color: #eefbfb;
+  height: 2rem;
+  border: 1px #E7E7E7 solid;
+  padding: 0 0 0 10px;
 }
-.modal .form label._must::after {
-  content: "必須";
-  font-size: 0.875rem;
-  color: #fff;
-  padding: 6px 16px 6px;
-  background-color: #0c449b;
-  border-radius: 10px;
-  margin-left: 26px;
+.modal .form-plan {
+  margin-bottom: 1.5rem;
 }
-.modal .form-checkbox {
-  white-space: nowrap;
-  text-align: center;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 30px;
+.modal .form-plan label {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: normal;
+  margin-bottom: 1rem;
 }
-.modal .form-checkbox input {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  margin-right: 5px;
-}
-.modal .form-btn {
-  text-align: center;
+.modal .form-plan select {
+  background-color: #ffffff;
+  width: 100%;
+  height: 2rem;
+  border: 1px #E7E7E7 solid;
+  padding: 0 0 0 10px;
 }
 .modal .form-submit {
-  width: 10px;
-  padding-right: 48px;
-  padding-left: 48px;
-  opacity: 1;
+  cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  display: block;
+  border: #707070 1px solid;
+  padding-right: 48px;
+  padding-left: 48px;
+  padding-top: 10px;
+  padding-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+}
+.modal .form-submit:hover {
+  opacity: 0.8;
 }
 .modal .form-submit._disabled {
   opacity: 0.4;
+  cursor: default;
 }
 .modal .form-end {
   text-align: center;
   display: none;
-  position: relative;
+  position: absolute;
+  bottom: 20;
+  left: 0;
+  right: 0;
 }
 .modal .form-false {
   text-align: center;
   display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /* ===============================================
@@ -818,7 +839,6 @@ body.no-scroll {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
   border-radius: 4px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
@@ -866,18 +886,59 @@ body.no-scroll {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 70%;
   margin: auto;
   text-align: center;
-  background-color: #ffffff;
+}
+.mobile-linkbox {
+  margin-bottom: 2rem;
+}
+.mobile-link a {
+  display: block;
+  padding: 40px 0 40px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+.mobile-link:nth-child(1) {
+  background-image: url(../images/service-image1.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+.mobile-link:nth-child(2) {
+  background-image: url(../images/plan-image3.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+}
+.mobile-link:nth-child(3) {
+  background-image: url(../images/menu-image3.png);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 0 10px 10px;
+}
+.mobile-btn {
+  display: block;
+  color: #ffffff;
+  padding: 17px 37px 17px 69px;
+  background-color: #978f10;
+  padding: 17px 0 17px;
+  border-radius: 10px;
 }
 
+/* ===============================================
+# サブヘッダー(sub header)
+=============================================== */
 .sh {
   position: fixed;
+  z-index: -1;
   width: 100%;
   background-color: #ffffff;
   display: none;
+  opacity: 0;
 }
 .sh._active {
   -webkit-animation: fadeIn 0.3s ease-out 0s forwards;
@@ -945,56 +1006,6 @@ body.no-scroll {
     z-index: -1;
   }
 }
-
-/* ===============================================
-# サブヘッダー(sub header)
-=============================================== */
-.sh {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  background-color: #ffffff;
-  display: none;
-  opacity: 0;
-}
-.sh._active {
-  -webkit-animation: fadeIn 0.3s ease-out 0s forwards;
-          animation: fadeIn 0.3s ease-out 0s forwards;
-  display: block;
-}
-@keyframes fadeIn {
-  0% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
-    opacity: 0;
-    z-index: -1;
-  }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1;
-    z-index: 100;
-  }
-}
-.sh._inactive {
-  -webkit-animation: fadeOut 0.3s ease-out 0s forwards;
-          animation: fadeOut 0.3s ease-out 0s forwards;
-  display: block;
-}
-@keyframes fadeOut {
-  0% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    opacity: 1;
-    z-index: 100;
-  }
-  100% {
-    -webkit-transform: translate(0, -100%);
-            transform: translate(0, -100%);
-    opacity: 0;
-    z-index: -1;
-  }
-}
 .sh-container {
   max-width: 1980px;
   margin-left: auto;
@@ -1031,7 +1042,7 @@ body.no-scroll {
   margin-left: 120px;
 }
 .sh-link {
-  color: #ffffff;
+  color: #000000;
 }
 .sh-link:nth-of-type(n + 2) {
   margin-left: 2rem;
@@ -1059,12 +1070,6 @@ body.no-scroll {
 }
 .sh-toggle {
   display: none;
-}
-.sh-link {
-  color: #000000;
-}
-.sh .toggle-btn span {
-  background-color: #000000;
 }
 
 .concept {
@@ -1283,6 +1288,10 @@ body.no-scroll {
 }
 .news-tab::after {
   content: "";
+  display: none;
+}
+.news-tab._selected::after {
+  content: "";
   display: inline-block;
   height: 1px;
   background-color: #707070;
@@ -1290,14 +1299,8 @@ body.no-scroll {
   bottom: 0;
   left: 0;
   width: 100%;
-}
-.news-tab._selected {
   cursor: default;
   opacity: 1;
-}
-.news-tab._selected::after {
-  content: "";
-  display: none;
 }
 .news-list {
   display: none;
@@ -1541,7 +1544,6 @@ body.no-scroll {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
     border-radius: 4px;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -1572,11 +1574,11 @@ body.no-scroll {
     -webkit-transform: translate3d(17px, -7.5px, 0) rotate(45deg);
             transform: translate3d(17px, -7.5px, 0) rotate(45deg);
   }
+  .header-toggle .toggle-btn span {
+    background-color: #ffffff;
+  }
   html {
     font-size: 13.5px;
-  }
-  .modal .form-textarea textarea {
-    min-height: 100px;
   }
   .sh-links {
     display: none;
@@ -1598,7 +1600,6 @@ body.no-scroll {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #ffffff;
     border-radius: 4px;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -1629,13 +1630,13 @@ body.no-scroll {
     -webkit-transform: translate3d(17px, -7.5px, 0) rotate(45deg);
             transform: translate3d(17px, -7.5px, 0) rotate(45deg);
   }
+  .sh-toggle .toggle-btn span {
+    background-color: #000000;
+  }
 }
 @media screen and (max-width: 1024px) {
   html {
     font-size: 14px;
-  }
-  .modal .form-textarea textarea {
-    min-height: 130px;
   }
 }
 /*# sourceMappingURL=style.css.map */

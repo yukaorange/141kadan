@@ -20,7 +20,7 @@
     @include mixin.fadeOut;
     display: block;
   }
-
+  
   &-container {
     max-width: 1980px;
     margin-left: auto;
@@ -52,7 +52,7 @@
   }
 
   &-link {
-    color: #ffffff;
+    color: #000000;
     &:nth-of-type(n + 2) {
       margin-left: 2rem;
     }
@@ -60,9 +60,7 @@
 
   // お問い合わせボタンのデザイン
   &-btn {
-    display: block;
-    color: #ffffff;
-    padding: 17px 37px 17px 69px;
+    @include mixin.btn;
     margin: 13px 20px 13px;
     background-color: #978f10;
     position: relative;
@@ -95,16 +93,11 @@
       cursor: pointer;
       & .toggle-btn {
         @include mixin.toggleBtn;
+        & span{
+          background-color: #000000;
+        }
       }
     }
   }
 
-  &-link {
-    color: #000000;
-  }
-  & .toggle-btn {
-    span {
-      background-color: #000000;
-    }
-  }
 }
