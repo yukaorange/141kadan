@@ -51,8 +51,13 @@
       opacity: 0.8;
     }
   }
+  @include media.mobile{
+    margin: 0;
+  }
   @include media.pad{
     border-radius: 10px;
+    padding: 17px 5px 17px 25px;
+    margin-left: 0;
   }
 }
 

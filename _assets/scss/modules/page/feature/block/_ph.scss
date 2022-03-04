@@ -61,14 +61,6 @@
     margin: 11px 20px 12px;
     background-color: #978f10;
     position: relative;
-    @include mixin.mobile{
-      padding: 17px 5px 17px 25px;
-      margin: 0;
-    }
-    @include mixin.pad{
-      padding: 17px 5px 17px 25px;
-      margin-left: 0;
-    }
     // カレンダーのロゴ
     &:before {
       position: absolute;

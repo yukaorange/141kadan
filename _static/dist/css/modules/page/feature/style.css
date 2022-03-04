@@ -87,19 +87,14 @@
     opacity: 0.8;
   }
 }
-@media screen and (max-width: 1024px) {
-  .ph-btn {
-    border-radius: 10px;
-  }
-}
 @media screen and (max-width: 599px) {
   .ph-btn {
-    padding: 17px 5px 17px 25px;
     margin: 0;
   }
 }
 @media screen and (max-width: 1024px) {
   .ph-btn {
+    border-radius: 10px;
     padding: 17px 5px 17px 25px;
     margin-left: 0;
   }

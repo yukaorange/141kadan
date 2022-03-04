@@ -556,9 +556,16 @@ img {
     opacity: 0.8;
   }
 }
+@media screen and (max-width: 599px) {
+  .header-btn {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 1024px) {
   .header-btn {
     border-radius: 10px;
+    padding: 17px 5px 17px 25px;
+    margin-left: 0;
   }
 }
 .header-btn:before {
@@ -1034,9 +1041,16 @@ body.no-scroll {
     opacity: 0.8;
   }
 }
+@media screen and (max-width: 599px) {
+  .mobile-btn {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 1024px) {
   .mobile-btn {
     border-radius: 10px;
+    padding: 17px 5px 17px 25px;
+    margin-left: 0;
   }
 }
 
@@ -1179,9 +1193,16 @@ body.no-scroll {
     opacity: 0.8;
   }
 }
+@media screen and (max-width: 599px) {
+  .sh-btn {
+    margin: 0;
+  }
+}
 @media screen and (max-width: 1024px) {
   .sh-btn {
     border-radius: 10px;
+    padding: 17px 5px 17px 25px;
+    margin-left: 0;
   }
 }
 .sh-btn:before {

@@ -99,7 +99,7 @@
           padding: 55px 0 120px 13%;
         }
         @include mixin.pad {
-          background-image: url(../../../../images/feature-image1.png);
+          background-image: url(../../../../images/service-image1.png);
           background-repeat: repeat;
           background-position: center;
           background-size: cover;
@@ -119,14 +119,23 @@
           padding: 55px 13% 120px 5%;
         }
         @include mixin.pad {
-          background-image: url(../../../../images/feature-image2.png);
+          background-image: url(../../../../images/service-image2.png);
           background-repeat: repeat;
           background-position: center;
           background-size: cover;
+          padding: 20% 5%;
         }
       }
       & .#{$sec}-image {
         right: 0;
+      }
+    }
+    // 3番目にあてるスタイル
+    &:nth-of-type(3){
+      & .#{$sec}-textbox{
+        @include mixin.pad{
+          background-image: url(../../../../images/service-image3.png);
+        }
       }
     }
   }
