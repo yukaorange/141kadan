@@ -6,12 +6,14 @@
 
   &-container {
     @include mixin.container;
+    margin-bottom: 9.78125rem;
   }
   // パンくずリスト
   &-nav {
     margin-top: 2.125rem;
-    margin-bottom: 5.75rem;
+    margin-bottom: 5.5rem;
   }
+
 
   &-breadcrumb {
     display: flex;
@@ -35,14 +37,16 @@
   &-message {
     text-align: center;
     line-height: 2;
-    margin-bottom: 4.75rem;
+    margin-bottom: 8rem;
   }
 
   // コンテンツリスト
 
   &-item {
     position: relative;
-    margin-bottom: 5.25rem;
+    &:not(:last-child){
+      margin-bottom: 8.8rem;
+    }
     // テキストボックス共通スタイル
     & .#{$sec}-textbox {
       position: static;
@@ -60,7 +64,7 @@
     // イメージ共通スタイル
     & .#{$sec}-image {
       position: absolute;
-      top: -5px;
+      top: -60px;
       z-index: 60;
       width: 525px;
       height: 300px;
@@ -70,7 +74,7 @@
     &:nth-of-type(odd) {
       & .#{$sec}-textbox {
         margin-left: auto;
-        padding: 55px 16% 163px 20%;
+        padding: 55px 16% 155px 20%;
       }
       & .#{$sec}-image {
         left: 0;
@@ -80,7 +84,7 @@
     &:nth-of-type(even) {
       & .#{$sec}-textbox {
         margin-right: auto;
-        padding: 55px 20% 163px 16%;
+        padding: 55px 13% 155px 5%;
       }
       & .#{$sec}-image {
         right: 0;
@@ -90,11 +94,12 @@
 
   &-title {
     font-size: 1.5rem;
-    margin-bottom: 2.875rem;
+    margin-bottom: 2.5rem;
   }
 
   &-text {
     line-height: 2;
+    white-space: nowrap;
   }
 
 }

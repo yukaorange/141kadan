@@ -27,7 +27,7 @@
   }
 
   &-logo {
-    padding: 17px 0 20px 20px;
+    padding: 16px 0 20px 23px;
     a {
       display: block;
       max-width: 200px;
@@ -45,14 +45,14 @@
   &-link {
     color: #000000;
     &:nth-of-type(n + 2) {
-      margin-left: 2rem;
+      margin-left: 1.9rem;
     }
   }
 
   // お問い合わせボタンのデザイン
   &-btn {
     @include mixin.btn;
-    margin: 13px 20px 13px;
+    margin: 11px 20px 12px;
     background-color: #978f10;
     position: relative;
     @include mixin.mobile {
