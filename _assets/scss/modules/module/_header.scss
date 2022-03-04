@@ -31,12 +31,18 @@
     a {
       display: block;
       max-width: 200px;
+      @include mixin.mobile{
+        max-width: 150px;
+        }
     }
   }
 
   &-links {
     display: flex;
     margin-left: 120px;
+    @include mixin.pad{
+      margin-left: 40px;
+    }
     @include mixin.mobile {
       display: none;
     }
@@ -45,7 +51,7 @@
   &-link {
     color: #ffffff;
     &:nth-of-type(n + 2) {
-      margin-left: 2rem;
+      margin-left: 1.9rem;
     }
   }
 
@@ -55,6 +61,7 @@
     margin: 13px 20px 13px;
     background-color: #978f10;
     position: relative;
+    // カレンダーのロゴ
     &:before {
       position: absolute;
       top: 16px;
@@ -67,6 +74,18 @@
       background-image: url(../images/header-btn-icon.png);
       background-position: 0 0;
       background-size: contain;
+      @include mixin.mobile{
+        top: 17px;
+        left: 6px;
+        width: 16px;
+        height: 16px;
+      }
+      @include mixin.pad{
+        top: 17px;
+        left: 6px;
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 

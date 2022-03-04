@@ -27,11 +27,17 @@
     margin-right:11.2%;
     letter-spacing: -0.1rem;
     white-space: nowrap;
-
-
     & span{
       display: block;
       margin-right: 2.3rem;
+    }
+    @include mixin.pad{
+    margin-top: 40%;
+    }
+    @include mixin.mobile{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
     }
   }
 

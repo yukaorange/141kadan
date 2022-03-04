@@ -9,31 +9,68 @@
   margin-right: auto;
 
   &-container {
-    padding-top: 6.625rem;
     padding-bottom: 4.875rem;
   }
 
   &-item {
     display: flex;
+    @include mixin.pad {
+      display: block;
+    }
     // 奇数番目のメニューは左に画像配置
     &:nth-of-type(odd) {
       // 奇数番目の各要素にスタイル
       & .#{$sec}-textbox {
-        margin-left: 8.5rem;
+        margin-left: 7%;
+        @include mixin.pc {
+          margin-left: 1.5%;
+        }
+        @include mixin.pad {
+          background-image: url(../images/menu-image1.png);
+          background-repeat: repeat;
+          background-position: center;
+          background-size: cover;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
       }
       & .#{$sec}-title {
         //行間62px
         line-height: 1.7;
         margin-top: 1.3rem;
         margin-bottom: 3.4rem;
+        @include mixin.pad {
+          @include mixin.white;
+          font-size: 2rem;
+          padding: 0 0 0 4%;
+          margin: 0;
+          margin-bottom: 2rem;
+        }
       }
       & .#{$sec}-text {
         //行間32px
         line-height: 2;
         margin-bottom: 4.2rem;
+        @include mixin.pad {
+          @include mixin.white;
+          margin: 0;
+          padding: 0 0 0 4%;
+          margin-bottom: 2rem;
+        }
+        @include mixin.mobile{
+        & br{
+          display: none;
+        }
+        }
       }
-      & .#{$sec}-btn{
+      & .#{$sec}-btn {
         @include mixin.menu-btn;
+        @include mixin.pad {
+          margin-left: 4%;
+          @include mixin.white;
+        }
       }
     }
     // 偶数番目のメニューは右に画像配置
@@ -41,57 +78,85 @@
       flex-direction: row-reverse;
       // 偶数番目の各要素にスタイル
       & .#{$sec}-textbox {
-        margin-right: 10.8rem;
+        margin-right: 9%;
+        @include mixin.pc {
+          margin-right: 7%;
+        }
+        @include mixin.pad {
+          background-image: url(../images/menu-image2.png);
+          background-repeat: repeat;
+          background-position: center;
+          background-size: cover;
+          margin-left: auto;
+          margin-right: auto;
+          padding-top: 4rem;
+          padding-bottom: 4rem;
+        }
       }
       & .#{$sec}-title {
         //行間62px
         line-height: 1.7;
         margin-top: 2.7rem;
         margin-bottom: 3.4rem;
+        @include mixin.pad {
+          @include mixin.white;
+          font-size: 2rem;
+          padding: 0 0 0 4%;
+          margin: 0;
+          margin-bottom: 2rem;
+        }
       }
       & .#{$sec}-text {
         //行間32px
         line-height: 2;
         margin-bottom: 2.2rem;
+        @include mixin.pad {
+          @include mixin.white;
+          padding: 0 0 0 4%;
+          margin: 0;
+          margin-bottom: 2rem;
+        }
       }
-      & .#{$sec}-btn{
+      & .#{$sec}-btn {
         letter-spacing: 0.1rem;
         @include mixin.menu-btn;
         padding-right: 48px;
-      }
-    }
-    // ボタンサイズ調整
-    &:nth-of-type(3){
-      & .#{$sec}-btn{
-        padding-left: 52px;
-        padding-right:51px ;
+        @include mixin.pad {
+          margin-left: 4%;
+          @include mixin.white;
+        }
       }
     }
 
+    // 3番目の要素pad以下に背景指定
+    &:nth-of-type(3) {
+      & .#{$sec}-textbox {
+        @include mixin.pad {
+          background-image: url(../images/menu-image3.png);
+        }
+      }
+    }
+
+    // ボタンサイズ調整
+    &:nth-of-type(3) {
+      & .#{$sec}-btn {
+        padding-left: 52px;
+        padding-right: 51px;
+      }
+    }
 
     &:not(:last-child) {
       margin-bottom: 7.625rem;
+      @include mixin.pad {
+        margin-bottom: 2rem;
+      }
     }
   }
 
   &-image {
     width: 54.7%;
+    @include mixin.pad {
+      display: none;
+    }
   }
-
-  // &-title {
-  //   //行間62px
-  //   line-height: 1.7;
-  //   margin-top: 1.3rem;
-  //   margin-bottom: 3.4rem;
-  // }
-
-  // &-text {
-  //   //行間32px
-  //   line-height: 2;
-  //   margin-bottom: 4.2rem;
-  // }
-
-  // &-btn {
-  //   @include mixin.menu-btn;
-  // }
 }

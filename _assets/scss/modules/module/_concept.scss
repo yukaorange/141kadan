@@ -7,53 +7,103 @@
   background-position: center;
   background-size: cover;
 
-  &-container{
+  &-container {
     @include mixin.container;
     padding-top: 4.02rem;
     padding-bottom: 7rem;
+    margin-bottom: 6.625rem;
     display: flex;
     flex-direction: row-reverse;
-  }
-
-  &-title{
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    margin-right:9.8% ;
-    font-size: 1.75rem;
-    letter-spacing: -0.44rem;
-    & span{
+    @include mixin.pad {
       display: block;
-      margin-top: 5.3rem;
-      margin-right: 1.4rem;
+      margin-bottom: 0;
     }
   }
 
-  &-textbox{
+  &-title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin-right: 9.8%;
+    font-size: 1.75rem;
+    letter-spacing: -0.44rem;
+    & span {
+      display: block;
+      margin-top: 5.3rem;
+      margin-right: 1.4rem;
+      @include mixin.pad {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+      }
+    }
+    @include mixin.pad {
+      margin-left: 25%;
+      margin-right: auto;
+      writing-mode: horizontal-tb;
+      letter-spacing: normal;
+      text-align: left;
+    }
+    @include mixin.mobile {
+      margin-left: auto;
+      text-align: left;
+    }
+  }
+
+  &-textbox {
     writing-mode: vertical-rl;
     text-orientation: upright;
     margin-right: 8.7%;
     margin-top: 5.3rem;
-    &:nth-of-type(n+2){
+    &:nth-of-type(n + 2) {
       margin-right: 8%;
+      @include mixin.pad {
+        margin-right: auto;
+      }
+    }
+    @include mixin.pad {
+      writing-mode: horizontal-tb;
+      letter-spacing: normal;
+      text-align: left;
+      margin-top: 5%;
+      margin-right: auto;
+      margin-left: 25%;
+    }
+    @include mixin.mobile {
+      margin-left: auto;
+      text-align-last: left;
     }
   }
 
-  &-text{
+  &-text {
     // 文字サイズ+行間22px
     line-height: 2.375;
     letter-spacing: -0.31rem;
-
+    @include mixin.pad {
+      writing-mode: horizontal-tb;
+      letter-spacing: normal;
+    }
+    @include mixin.mobile{
+      letter-spacing: -0.03rem;
+    }
   }
 
-  &-sign{
+  &-sign {
     font-size: 1.375rem;
     writing-mode: vertical-rl;
     text-orientation: upright;
     margin-right: 9%;
-    text-align:right;
+    text-align: right;
     letter-spacing: -0.4rem;
     margin-bottom: 1.7rem;
+    @include mixin.pad {
+      margin-top: 5%;
+      writing-mode: horizontal-tb;
+      letter-spacing: normal;
+      text-align: right;
+    }
+    @include mixin.mobile {
+      text-align: right;
+      font-size: 1.3rem;
+    }
   }
-
-  
 }
