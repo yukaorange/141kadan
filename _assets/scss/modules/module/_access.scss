@@ -12,41 +12,53 @@
     max-width: 1980px;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 6.625rem;
-    padding-bottom: 4.875rem;
+    padding-top: 7.2rem;
+    padding-bottom: 6.875rem;
     margin-left: auto;
     margin-right: auto;
   }
 
   &-title {
     @include mixin.common-title;
-    margin-bottom: 3.8125rem;
+    margin-bottom: 4.8125rem;
   }
 
   &-box{
     display: flex;
     justify-content: center;
-    gap: 4%;
     margin-bottom: 4.3125rem;
+    gap: 4.3%;
   }
 
   &-image{
-    width: 34.1%;
-    margin-left: 5rem;
+    width: 34.7%;
+    margin-left: 133px;
+    max-height: 370px;
   }
 
   &-desc{
-    padding-top: 1rem;
-    padding-bottom: 1.75rem;
+    padding-top: 1.2rem;
   }
 
   &-text{
-    line-height: 2;
+    line-height: 1;
     white-space: nowrap;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01rem;
+    & span{
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+
+  &-tel{
+    & .#{$sec}-text{
+      margin-bottom: 1.4rem;
+    }
   }
 
   &-map{
-    width: 41.25%;
+    width: 42%;
     padding-bottom: 592px;
     overflow: hidden;
     position: relative;

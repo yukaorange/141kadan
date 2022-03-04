@@ -5,36 +5,40 @@
   $sec:"plan";
   background-image: url(../images/plan-bg.png);
   background-repeat: repeat;
-  background-position: 0 0;
-  background-size: auto auto;
+  background-position: center;
+  background-size: cover;
 
   &-container{
     @include mixin.container;
-    padding-top: 6.625rem;
-    padding-bottom: 4.875rem;
+    padding-top: 7.3rem;
+    padding-bottom: 3.875rem;
   }
 
   &-title{
     @include mixin.common-title;
-    margin-bottom: 3.8125rem;
+    margin-bottom: 3.5rem;
   }
 
   &-list{
     display: flex;
-    gap:7.96%;
+    justify-content: space-between;
+    gap:7.94%;
   }
 
   &-image{
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
   }
 
   &-text{
     //行間32px
-    line-height: 2;
+    line-height: 2.2;
     margin-bottom: 4.5625rem;
+    letter-spacing: -0.02rem;
 
     &._concept{
-      margin-bottom: 1.875rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.8;
+      letter-spacing: -0.01rem
     }
   }
 

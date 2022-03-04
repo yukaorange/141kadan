@@ -2,55 +2,96 @@
 @use "../mixin/mixin";
 
 .menu {
-  $sec:"menu";
+  $sec: "menu";
   background-color: #ffffff;
   max-width: 1980px;
   margin-left: auto;
   margin-right: auto;
 
-  &-container{
+  &-container {
     padding-top: 6.625rem;
     padding-bottom: 4.875rem;
   }
 
-  &-item{
+  &-item {
     display: flex;
     // 奇数番目のメニューは左に画像配置
-    &:nth-of-type(odd){
-      & .#{$sec}-textbox{
+    &:nth-of-type(odd) {
+      // 奇数番目の各要素にスタイル
+      & .#{$sec}-textbox {
         margin-left: 8.5rem;
+      }
+      & .#{$sec}-title {
+        //行間62px
+        line-height: 1.7;
+        margin-top: 1.3rem;
+        margin-bottom: 3.4rem;
+      }
+      & .#{$sec}-text {
+        //行間32px
+        line-height: 2;
+        margin-bottom: 4.2rem;
+      }
+      & .#{$sec}-btn{
+        @include mixin.menu-btn;
       }
     }
     // 偶数番目のメニューは右に画像配置
-    &:nth-of-type(even){
+    &:nth-of-type(even) {
       flex-direction: row-reverse;
-      & .#{$sec}-textbox{
-        margin-right: 13.5rem;
+      // 偶数番目の各要素にスタイル
+      & .#{$sec}-textbox {
+        margin-right: 10.8rem;
+      }
+      & .#{$sec}-title {
+        //行間62px
+        line-height: 1.7;
+        margin-top: 2.7rem;
+        margin-bottom: 3.4rem;
+      }
+      & .#{$sec}-text {
+        //行間32px
+        line-height: 2;
+        margin-bottom: 2.2rem;
+      }
+      & .#{$sec}-btn{
+        letter-spacing: 0.1rem;
+        @include mixin.menu-btn;
+        padding-right: 48px;
       }
     }
-    &:not(:last-child){
+    // ボタンサイズ調整
+    &:nth-of-type(3){
+      & .#{$sec}-btn{
+        padding-left: 52px;
+        padding-right:51px ;
+      }
+    }
+
+
+    &:not(:last-child) {
       margin-bottom: 7.625rem;
     }
   }
 
-  &-image{
-    width: 53%;
+  &-image {
+    width: 54.7%;
   }
 
-  &-title{
-    //行間62px
-    line-height: 1.7;
-    margin-bottom: 4.1875rem;
-  }
+  // &-title {
+  //   //行間62px
+  //   line-height: 1.7;
+  //   margin-top: 1.3rem;
+  //   margin-bottom: 3.4rem;
+  // }
 
-  &-text{
-    //行間32px
-    line-height: 2;
-    margin-bottom: 4.5625rem;
-  }
+  // &-text {
+  //   //行間32px
+  //   line-height: 2;
+  //   margin-bottom: 4.2rem;
+  // }
 
-  &-btn{
-    @include mixin.menu-btn;
-  }
+  // &-btn {
+  //   @include mixin.menu-btn;
+  // }
 }
-

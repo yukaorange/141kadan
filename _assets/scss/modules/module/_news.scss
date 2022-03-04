@@ -7,19 +7,20 @@
 
   &-container {
     @include mixin.container;
-    padding-top: 6.625rem;
-    padding-bottom: 4.875rem;
+    padding-top: 7.3rem;
+    padding-bottom: 2.5rem;
   }
 
   &-title {
     @include mixin.common-title;
-    margin-bottom: 3.8125rem;
+    margin-bottom: 2.3rem;
   }
 
   &-tablist {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-left: -25px;
+    margin-bottom: 2.95rem;
     gap: 50px;
   }
 
@@ -78,7 +79,10 @@
   }
 
   &-date {
+    font-size: 0.875rem;
     margin-bottom: 5px;
+    line-height: 0.5;
+    letter-spacing: -0.01rem;
   }
 
   &-text {
