@@ -14,7 +14,6 @@
     margin-bottom: 5.5rem;
   }
 
-
   &-breadcrumb {
     display: flex;
   }
@@ -29,6 +28,10 @@
         position: absolute;
         left: 54px;
         top: 3px;
+        @include mixin.pad {
+          top: 0;
+          left: 48px;
+        }
       }
     }
   }
@@ -38,14 +41,18 @@
     text-align: center;
     line-height: 2;
     margin-bottom: 8rem;
+    padding: 0 2%;
   }
 
   // コンテンツリスト
 
   &-item {
     position: relative;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 8.8rem;
+      @include mixin.pad {
+        margin-bottom: 1rem;
+      }
     }
     // テキストボックス共通スタイル
     & .#{$sec}-textbox {
@@ -53,13 +60,20 @@
       z-index: 50;
       top: 0;
       margin-top: 3.5625rem;
-      
       max-width: 813px;
       // 背景画像
       background-image: url(../../../../images/concept-bg.png);
       background-repeat: repeat;
       background-position: 0 0;
       background-size: cover;
+      @include mixin.pc {
+        max-width: 700px;
+      }
+      @include mixin.pad {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: none;
+      }
     }
     // イメージ共通スタイル
     & .#{$sec}-image {
@@ -67,24 +81,49 @@
       top: -60px;
       z-index: 60;
       width: 525px;
-      height: 300px;
+      max-height: 300px;
       margin-bottom: 138px;
+      @include mixin.pc {
+        width: 40%;
+      }
+      @include mixin.pad {
+        display: none;
+      }
     }
     // 奇数番目にあてるスタイル
     &:nth-of-type(odd) {
       & .#{$sec}-textbox {
         margin-left: auto;
         padding: 55px 16% 155px 20%;
+        @include mixin.pc {
+          padding: 55px 0 120px 13%;
+        }
+        @include mixin.pad {
+          background-image: url(../../../../images/feature-image1.png);
+          background-repeat: repeat;
+          background-position: center;
+          background-size: cover;
+          padding: 20% 5%;
+        }
       }
       & .#{$sec}-image {
         left: 0;
-      } 
+      }
     }
     // 偶数番目にあてるスタイル
     &:nth-of-type(even) {
       & .#{$sec}-textbox {
         margin-right: auto;
         padding: 55px 13% 155px 5%;
+        @include mixin.pc {
+          padding: 55px 13% 120px 5%;
+        }
+        @include mixin.pad {
+          background-image: url(../../../../images/feature-image2.png);
+          background-repeat: repeat;
+          background-position: center;
+          background-size: cover;
+        }
       }
       & .#{$sec}-image {
         right: 0;
@@ -93,14 +132,25 @@
   }
 
   &-title {
+    width: fit-content;
     font-size: 1.5rem;
     margin-bottom: 2.5rem;
+    @include mixin.pad {
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+    }
   }
 
   &-text {
+    width: fit-content;
     line-height: 2;
     white-space: nowrap;
+    @include mixin.pad {
+      margin-left: auto;
+      margin-right: auto;
+      color: #ffffff;
+      white-space: normal;
+    }
   }
-
 }
-

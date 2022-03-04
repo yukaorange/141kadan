@@ -28,6 +28,12 @@
     height: 600px;
     background-color: #ffffff;
     opacity: 1;
+    @include mixin.pad{
+      width: 400px;
+    }
+    @include mixin.mobile{
+      width: 345px;
+    }
   }
 
   &-close{

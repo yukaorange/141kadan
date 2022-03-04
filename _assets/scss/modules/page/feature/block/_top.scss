@@ -10,6 +10,9 @@
     background-size: cover;
     height: 500px;
     position: relative;
+    @include mixin.mobile{
+    margin-top: 70px;
+    }
   }
 
   &-text {

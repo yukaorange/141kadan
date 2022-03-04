@@ -7,7 +7,7 @@ const notify = require("gulp-notify"); // エラー発生時のアラート出�
 const browserSync = require("browser-sync"); //ブラウザリロード
 const autoprefixer = require('gulp-autoprefixer');//ベンダープレフィックス自動付与
 const postcss = require("gulp-postcss");//css-mqpackerを使うために必要
-const mqpacker = require('css-mqpacker');//メディアクエリをまとめる
+// const mqpacker = require('css-mqpacker');//メディアクエリをまとめる
 
 //画像圧縮
 const imagemin = require("gulp-imagemin");
@@ -64,7 +64,7 @@ const cssSass = () => {
       }))
     .pipe(sass({ outputStyle: 'expanded' })) //指定できるキー expanded compressed
     .pipe(autoprefixer(TARGET_BROWSERS))// ベンダープレフィックス自動付与
-    .pipe(postcss([mqpacker()])) // メディアクエリをまとめる
+    // .pipe(postcss([mqpacker()])) // メディアクエリをまとめる
     .pipe(gulp.dest(distPath.css, { sourcemaps: './' })) //コンパイル先
     .pipe(browserSync.stream())
     .pipe(notify({
