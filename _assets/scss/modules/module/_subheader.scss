@@ -64,9 +64,6 @@
     margin: 13px 20px 13px;
     background-color: #978f10;
     position: relative;
-    @include mixin.mobile {
-      display: none;
-    }
     &:before {
       position: absolute;
       top: 16px;

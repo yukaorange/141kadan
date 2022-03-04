@@ -6,22 +6,28 @@
 
   &-container {
     @include mixin.container;
+    padding-top: 5.9rem;
+    padding-bottom: 4.625rem;
+    border-top: #e7e7e7 1px solid;
+    border-bottom: #e7e7e7 1px solid;
+    margin-bottom: 6.03125rem;
   }
 
   &-title{
     font-size: 1.625rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
   }
 
   &-list{
     padding: 0 12.7% 0 12.7%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 6.03125rem;
   }
 
   &-term{
+    line-height: 1.3125;
+    padding: 15px 0 ;
     width: 25%; 
     font-size: 0.9375rem;
     border-top: 1px solid #e7e7e7;
@@ -31,9 +37,10 @@
   }
 
   &-desc{
-    width: 75%;
+    line-height: 1.3125;
+    padding: 15px 0 ;
+    width: 75%; 
     font-size: 0.9375rem;
-    line-height: 1.5;
     border-top: 1px solid #e7e7e7;
     &:last-of-type{
       border-bottom: 1px solid #e7e7e7;

@@ -453,6 +453,14 @@ a {
 a:hover {
   opacity: 0.8;
 }
+@media (hover: none) {
+  a {
+    /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
+  }
+  a:active {
+    opacity: 0.8;
+  }
+}
 
 ._text-white {
   color: #ffffff;
@@ -521,6 +529,11 @@ img {
   display: flex;
   margin-left: 120px;
 }
+@media screen and (max-width: 599px) {
+  .header-links {
+    display: none;
+  }
+}
 .header-link {
   color: #ffffff;
 }
@@ -534,6 +547,19 @@ img {
   margin: 13px 20px 13px;
   background-color: #978f10;
   position: relative;
+}
+@media (hover: none) {
+  .header-btn {
+    /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
+  }
+  .header-btn:active {
+    opacity: 0.8;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header-btn {
+    border-radius: 10px;
+  }
 }
 .header-btn:before {
   position: absolute;
@@ -551,9 +577,68 @@ img {
 .header-toggle {
   display: none;
 }
+@media screen and (max-width: 599px) {
+  .header-toggle {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .header-toggle .toggle-btn {
+    position: relative;
+    width: 40px;
+    height: 30px;
+  }
+  .header-toggle .toggle-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .header-toggle .toggle-btn span:nth-of-type(1) {
+    top: 0;
+  }
+  .header-toggle .toggle-btn span:nth-of-type(2) {
+    top: calc(50% - 1px);
+  }
+  .header-toggle .toggle-btn span:nth-of-type(3) {
+    bottom: 0;
+  }
+  .header-toggle .toggle-btn._active span {
+    background-color: #000000;
+  }
+  .header-toggle .toggle-btn._active span:nth-of-type(1) {
+    width: 50%;
+    -webkit-transform: translate3d(3px, 6px, 0) rotate(45deg);
+            transform: translate3d(3px, 6px, 0) rotate(45deg);
+  }
+  .header-toggle .toggle-btn._active span:nth-of-type(2) {
+    -webkit-transform: translate3d(-1px, 0, 0) rotate(-45deg);
+            transform: translate3d(-1px, 0, 0) rotate(-45deg);
+  }
+  .header-toggle .toggle-btn._active span:nth-of-type(3) {
+    width: 51%;
+    -webkit-transform: translate3d(17px, -7.5px, 0) rotate(45deg);
+            transform: translate3d(17px, -7.5px, 0) rotate(45deg);
+  }
+  .header-toggle .toggle-btn span {
+    background-color: #ffffff;
+  }
+}
 
 html {
   font-size: 16px;
+}
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 599px) {
+  html {
+    font-size: 13.5px;
+  }
 }
 
 body {
@@ -681,6 +766,16 @@ body.no-scroll {
   height: 600px;
   background-color: #ffffff;
   opacity: 1;
+}
+@media screen and (max-width: 1024px) {
+  .modal-container {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .modal-container {
+    width: 345px;
+  }
 }
 .modal-close {
   width: 18px;
@@ -931,6 +1026,19 @@ body.no-scroll {
   padding: 17px 0 17px;
   border-radius: 10px;
 }
+@media (hover: none) {
+  .mobile-btn {
+    /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
+  }
+  .mobile-btn:active {
+    opacity: 0.8;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobile-btn {
+    border-radius: 10px;
+  }
+}
 
 /* ===============================================
 # サブヘッダー(sub header)
@@ -1044,6 +1152,11 @@ body.no-scroll {
   display: flex;
   margin-left: 120px;
 }
+@media screen and (max-width: 599px) {
+  .sh-links {
+    display: none;
+  }
+}
 .sh-link {
   color: #000000;
 }
@@ -1057,6 +1170,19 @@ body.no-scroll {
   margin: 13px 20px 13px;
   background-color: #978f10;
   position: relative;
+}
+@media (hover: none) {
+  .sh-btn {
+    /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
+  }
+  .sh-btn:active {
+    opacity: 0.8;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .sh-btn {
+    border-radius: 10px;
+  }
 }
 .sh-btn:before {
   position: absolute;
@@ -1073,6 +1199,55 @@ body.no-scroll {
 }
 .sh-toggle {
   display: none;
+}
+@media screen and (max-width: 599px) {
+  .sh-toggle {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .sh-toggle .toggle-btn {
+    position: relative;
+    width: 40px;
+    height: 30px;
+  }
+  .sh-toggle .toggle-btn span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  .sh-toggle .toggle-btn span:nth-of-type(1) {
+    top: 0;
+  }
+  .sh-toggle .toggle-btn span:nth-of-type(2) {
+    top: calc(50% - 1px);
+  }
+  .sh-toggle .toggle-btn span:nth-of-type(3) {
+    bottom: 0;
+  }
+  .sh-toggle .toggle-btn._active span {
+    background-color: #000000;
+  }
+  .sh-toggle .toggle-btn._active span:nth-of-type(1) {
+    width: 50%;
+    -webkit-transform: translate3d(3px, 6px, 0) rotate(45deg);
+            transform: translate3d(3px, 6px, 0) rotate(45deg);
+  }
+  .sh-toggle .toggle-btn._active span:nth-of-type(2) {
+    -webkit-transform: translate3d(-1px, 0, 0) rotate(-45deg);
+            transform: translate3d(-1px, 0, 0) rotate(-45deg);
+  }
+  .sh-toggle .toggle-btn._active span:nth-of-type(3) {
+    width: 51%;
+    -webkit-transform: translate3d(17px, -7.5px, 0) rotate(45deg);
+            transform: translate3d(17px, -7.5px, 0) rotate(45deg);
+  }
+  .sh-toggle .toggle-btn span {
+    background-color: #000000;
+  }
 }
 
 .concept {
@@ -1592,129 +1767,5 @@ body.no-scroll {
   background-color: #000000;
   padding-top: 21px;
   padding-bottom: 23px;
-}
-@media (hover: none) {
-  a {
-    /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
-  }
-  a:active {
-    opacity: 0.8;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header-links {
-    display: none;
-  }
-  .header-btn {
-    display: none;
-  }
-  .header-toggle {
-    display: block;
-    padding: 20px;
-    cursor: pointer;
-  }
-  .header-toggle .toggle-btn {
-    position: relative;
-    width: 40px;
-    height: 30px;
-  }
-  .header-toggle .toggle-btn span {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 4px;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  .header-toggle .toggle-btn span:nth-of-type(1) {
-    top: 0;
-  }
-  .header-toggle .toggle-btn span:nth-of-type(2) {
-    top: calc(50% - 1px);
-  }
-  .header-toggle .toggle-btn span:nth-of-type(3) {
-    bottom: 0;
-  }
-  .header-toggle .toggle-btn._active span {
-    background-color: #000000;
-  }
-  .header-toggle .toggle-btn._active span:nth-of-type(1) {
-    width: 50%;
-    -webkit-transform: translate3d(3px, 6px, 0) rotate(45deg);
-            transform: translate3d(3px, 6px, 0) rotate(45deg);
-  }
-  .header-toggle .toggle-btn._active span:nth-of-type(2) {
-    -webkit-transform: translate3d(-1px, 0, 0) rotate(-45deg);
-            transform: translate3d(-1px, 0, 0) rotate(-45deg);
-  }
-  .header-toggle .toggle-btn._active span:nth-of-type(3) {
-    width: 51%;
-    -webkit-transform: translate3d(17px, -7.5px, 0) rotate(45deg);
-            transform: translate3d(17px, -7.5px, 0) rotate(45deg);
-  }
-  .header-toggle .toggle-btn span {
-    background-color: #ffffff;
-  }
-  html {
-    font-size: 13.5px;
-  }
-  .sh-links {
-    display: none;
-  }
-  .sh-btn {
-    display: none;
-  }
-  .sh-toggle {
-    display: block;
-    padding: 20px;
-    cursor: pointer;
-  }
-  .sh-toggle .toggle-btn {
-    position: relative;
-    width: 40px;
-    height: 30px;
-  }
-  .sh-toggle .toggle-btn span {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 4px;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  .sh-toggle .toggle-btn span:nth-of-type(1) {
-    top: 0;
-  }
-  .sh-toggle .toggle-btn span:nth-of-type(2) {
-    top: calc(50% - 1px);
-  }
-  .sh-toggle .toggle-btn span:nth-of-type(3) {
-    bottom: 0;
-  }
-  .sh-toggle .toggle-btn._active span {
-    background-color: #000000;
-  }
-  .sh-toggle .toggle-btn._active span:nth-of-type(1) {
-    width: 50%;
-    -webkit-transform: translate3d(3px, 6px, 0) rotate(45deg);
-            transform: translate3d(3px, 6px, 0) rotate(45deg);
-  }
-  .sh-toggle .toggle-btn._active span:nth-of-type(2) {
-    -webkit-transform: translate3d(-1px, 0, 0) rotate(-45deg);
-            transform: translate3d(-1px, 0, 0) rotate(-45deg);
-  }
-  .sh-toggle .toggle-btn._active span:nth-of-type(3) {
-    width: 51%;
-    -webkit-transform: translate3d(17px, -7.5px, 0) rotate(45deg);
-            transform: translate3d(17px, -7.5px, 0) rotate(45deg);
-  }
-  .sh-toggle .toggle-btn span {
-    background-color: #000000;
-  }
-}
-@media screen and (max-width: 1280px) {
-  html {
-    font-size: 14px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
