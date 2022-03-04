@@ -338,6 +338,7 @@
     background-repeat: repeat;
     background-position: center;
     background-size: cover;
+    padding: 20% 5%;
   }
 }
 .content-item:nth-of-type(even) .content-image {
