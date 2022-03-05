@@ -8,7 +8,7 @@
 .sh {
   position: fixed;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   background-color: #ffffff;
   display: none;
   opacity: 0;
@@ -28,7 +28,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    }
+  
 
   &-nav {
     display: flex;
@@ -116,3 +117,4 @@
   }
 
 }
+

@@ -678,6 +678,7 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  overflow-x: hidden;
 }
 body.no-scroll {
   overflow: hidden;
@@ -733,11 +734,16 @@ body.no-scroll {
   }
 }
 .fv-bg {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 10;
   position: absolute;
+  overflow-x: hidden;
+}
+.fv-bg img {
   opacity: 0;
+  display: block;
+  position: absolute;
   -webkit-animation: slideShow 30s infinite;
           animation: slideShow 30s infinite;
 }
@@ -779,11 +785,11 @@ body.no-scroll {
     opacity: 0;
   }
 }
-.fv-bg:nth-of-type(2) {
+.fv-bg img:nth-of-type(2) {
   -webkit-animation-delay: 10s;
           animation-delay: 10s;
 }
-.fv-bg:nth-of-type(3) {
+.fv-bg img:nth-of-type(3) {
   -webkit-animation-delay: 20s;
           animation-delay: 20s;
 }
@@ -1112,7 +1118,7 @@ body.no-scroll {
 .sh {
   position: fixed;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   background-color: #ffffff;
   display: none;
   opacity: 0;
@@ -1581,18 +1587,18 @@ body.no-scroll {
   transition: 0.3s;
 }
 .menu-item:nth-of-type(odd) .menu-btn:hover {
-  background-color: #ffffff;
+  background-color: #707070;
   color: #000000;
-  opacity: 1;
+  opacity: 0.8;
 }
 @media (hover: none) {
   .menu-item:nth-of-type(odd) .menu-btn {
     /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
   }
   .menu-item:nth-of-type(odd) .menu-btn:active {
-    background-color: #ffffff;
+    background-color: #707070;
     color: #000000;
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1666,18 +1672,18 @@ body.no-scroll {
   padding-right: 48px;
 }
 .menu-item:nth-of-type(even) .menu-btn:hover {
-  background-color: #ffffff;
+  background-color: #707070;
   color: #000000;
-  opacity: 1;
+  opacity: 0.8;
 }
 @media (hover: none) {
   .menu-item:nth-of-type(even) .menu-btn {
     /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
   }
   .menu-item:nth-of-type(even) .menu-btn:active {
-    background-color: #ffffff;
+    background-color: #707070;
     color: #000000;
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1830,18 +1836,18 @@ body.no-scroll {
   transition: 0.3s;
 }
 .plan-btn:hover {
-  background-color: #ffffff;
+  background-color: #707070;
   color: #000000;
-  opacity: 1;
+  opacity: 0.8;
 }
 @media (hover: none) {
   .plan-btn {
     /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
   }
   .plan-btn:active {
-    background-color: #ffffff;
+    background-color: #707070;
     color: #000000;
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 
@@ -2039,18 +2045,18 @@ body.no-scroll {
   transition: 0.3s;
 }
 .news-btn:hover {
-  background-color: #ffffff;
+  background-color: #707070;
   color: #000000;
-  opacity: 1;
+  opacity: 0.8;
 }
 @media (hover: none) {
   .news-btn {
     /* hoverが使えないタッチ端末を想定した装飾を記載（&:active使用する） */
   }
   .news-btn:active {
-    background-color: #ffffff;
+    background-color: #707070;
     color: #000000;
-    opacity: 1;
+    opacity: 0.8;
   }
 }
 

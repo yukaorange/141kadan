@@ -251,6 +251,12 @@
     left: 48px;
   }
 }
+@media screen and (max-width: 599px) {
+  .content-link:nth-of-type(1)::after {
+    top: 1;
+    left: 45px;
+  }
+}
 .content-message {
   text-align: center;
   line-height: 2;
