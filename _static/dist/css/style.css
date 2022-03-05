@@ -678,7 +678,6 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: hidden;
 }
 body.no-scroll {
   overflow: hidden;
@@ -688,6 +687,7 @@ body.no-scroll {
   height: 100vh;
   position: relative;
   overflow: hidden;
+  overflow-x: hidden;
 }
 .fv-container {
   width: 100%;
@@ -911,6 +911,14 @@ body.no-scroll {
   font-weight: normal;
   margin-bottom: 1rem;
 }
+.modal .form-plan label br {
+  display: none;
+}
+@media screen and (max-width: 1024px) {
+  .modal .form-plan label br {
+    display: block;
+  }
+}
 .modal .form-plan select {
   background-color: #ffffff;
   width: 100%;
@@ -1104,7 +1112,7 @@ body.no-scroll {
 .sh {
   position: fixed;
   z-index: -1;
-  width: 100%;
+  width: 100vw;
   background-color: #ffffff;
   display: none;
   opacity: 0;

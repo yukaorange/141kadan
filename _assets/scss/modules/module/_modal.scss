@@ -113,6 +113,12 @@
         width: fit-content;
         font-weight: normal;
         margin-bottom: 1rem;
+        & br{
+          display: none;
+          @include mixin.pad{
+          display: block;
+          }
+        }
       }
       & select {
         background-color: #ffffff;

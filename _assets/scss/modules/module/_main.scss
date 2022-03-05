@@ -3,6 +3,7 @@
 
 html{
   font-size: 16px;
+  
 
   @include mixin.pad {
     font-size: 14px;
@@ -16,8 +17,7 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  // 画面横スクロール禁止
-  overflow-x: hidden;
+  
 
   &.no-scroll {
     overflow: hidden;
