@@ -10,6 +10,9 @@
 
   &-container {
     padding-bottom: 4.875rem;
+    @include mixin.pad{
+    padding-bottom: 2rem;
+    }
   }
 
   &-item {

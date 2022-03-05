@@ -23,8 +23,7 @@
     color:#fff;
     font-size: 2.125rem;
     margin-top: 30.78%;
-    margin-left:auto;
-    margin-right:11.2%;
+    margin-left:77.75%;
     letter-spacing: -0.1rem;
     white-space: nowrap;
     & span{
@@ -33,6 +32,7 @@
     }
     @include mixin.pad{
     margin-top: 40%;
+    margin-left: 65%;
     }
     @include mixin.mobile{
     margin-left: auto;
@@ -54,5 +54,13 @@
     &:nth-of-type(3){
       animation-delay: 20s;
     }
+  }
+}
+
+
+// firefox 用
+_:lang(x)::-moz-placeholder, .fv-text {
+  @include mixin.mobile{
+    margin-left: 35.5%;
   }
 }

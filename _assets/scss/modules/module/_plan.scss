@@ -23,10 +23,32 @@
     display: flex;
     justify-content: space-between;
     gap:7.94%;
+    @include mixin.pc{
+    gap: 2%;
+    }
+    @include mixin.pad{
+    display: block;
+    }
+  }
+
+  &-item{
+    @include mixin.pad{
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    @include mixin.mobile{
+    width: 90%;
+    text-align-last: left;
+    }
   }
 
   &-image{
     margin-bottom: 1.5rem;
+    @include mixin.pad{
+    
+    }
   }
 
   &-text{
@@ -34,11 +56,26 @@
     line-height: 2.2;
     margin-bottom: 4.5625rem;
     letter-spacing: -0.02rem;
+    @include mixin.pc{
+    font-size: 0.9rem;
+    }
+    @include mixin.pad{
+    font-size: 1rem;
+    }
 
     &._concept{
       margin-bottom: 0.8rem;
       line-height: 1.8;
-      letter-spacing: -0.01rem
+      letter-spacing: -0.01rem;
+      @include mixin.pc{
+        font-size: 1.2rem;
+      }
+      @include mixin.pad{
+      font-size: 1.5rem;
+      }
+      @include mixin.mobile{
+      font-size: 1.2rem;
+      }
     }
   }
 

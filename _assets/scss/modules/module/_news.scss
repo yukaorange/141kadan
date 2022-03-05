@@ -28,25 +28,25 @@
     position: relative;
     @include mixin.cursor;
     &::after {
+      content: "";
+      display: none;
+    }
+    &._selected {
+      // 選択しているタブにアンダーライン
+      &::after {
         content: "";
-        display: none;
+        display: inline-block;
+        height: 1px;
+        background-color: #707070;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        // 選択されているタブはデフォルトカーソル
+        cursor: default;
+        opacity: 1;
       }
-      &._selected {
-        // 選択しているタブにアンダーライン
-        &::after {
-          content: "";
-          display: inline-block;
-          height: 1px;
-          background-color: #707070;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          // 選択されているタブはデフォルトカーソル
-          cursor: default;
-          opacity: 1;
-        }
-      }
+    }
   }
 
   &-list {
@@ -56,7 +56,11 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      // アニメーション
       @include mixin.tabSelect;
+      @include mixin.pad {
+        display: block;
+      }
     }
   }
 
@@ -66,11 +70,32 @@
     width: 48%;
     display: flex;
     margin-bottom: 1.25rem;
+    @include mixin.pad {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mixin.mobile {
+      width: 100%;
+      min-height: 100px;
+      background-repeat: repeat;
+      background-position: center;
+      background-size: cover;
+      &._event{
+        background-image: url(../images/news-image1.png);
+      }
+      &._course{
+        background-image: url(../images/news-image2.png);
+      }
+    }
   }
 
   &-image {
     width: 103px;
     height: 100px;
+    @include mixin.mobile {
+      display: none;
+    }
   }
 
   &-textbox {
@@ -83,14 +108,25 @@
     margin-bottom: 5px;
     line-height: 0.5;
     letter-spacing: -0.01rem;
+    @include mixin.pad{
+    font-size: 1rem;
+    }
+    @include mixin.mobile {
+      @include mixin.white;
+    }
   }
 
   &-text {
     //行間32px
     line-height: 2;
-
-    &._concept {
-      margin-bottom: 1.875rem;
+    @include mixin.pad {
+      padding-right: 4%;
+      & br {
+        display: none;
+      }
+    }
+    @include mixin.mobile {
+      @include mixin.white;
     }
   }
 
