@@ -79,3 +79,20 @@
     }
   }
 }
+
+@mixin mobile-btn {
+  display: block;
+  color: #ffffff;
+  @include media.touch{
+    &:active{
+      opacity: 0.8;
+    }
+  }
+  @include media.mobile{
+    margin: 0;
+  }
+  @include media.pad{
+    border-radius: 10px;
+    margin-left: 0;
+  }
+}

@@ -6,7 +6,7 @@ const plumber = require("gulp-plumber"); // エラーが発生しても強制終
 const notify = require("gulp-notify"); // エラー発生時のアラート出力
 const browserSync = require("browser-sync"); //ブラウザリロード
 const autoprefixer = require('gulp-autoprefixer');//ベンダープレフィックス自動付与
-const postcss = require("gulp-postcss");//css-mqpackerを使うために必要
+// const postcss = require("gulp-postcss");css-mqpackerを使うために必要
 // const mqpacker = require('css-mqpacker');//メディアクエリをまとめる
 
 //画像圧縮
@@ -115,7 +115,10 @@ const browserSyncFunc = () => {
 }
 
 const browserSyncOption = {
+  // 静的サイト構築時
   server: distBase
+  // 動的サイト
+  // proxy: "http://localsite.local/wp-content"
 }
 
 /**

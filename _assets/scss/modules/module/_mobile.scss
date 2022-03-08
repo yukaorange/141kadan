@@ -91,7 +91,7 @@
   }
 
   &-btn{
-    @include mixin.btn;
+    @include mixin.mobile-btn;
     background-color: #978f10;
     padding: 17px 0 17px;
     border-radius: 10px;

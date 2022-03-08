@@ -42,7 +42,7 @@
     }
     @include mixin.mobile{
       width: 100%;
-      text-align: center;
+      text-align: left;
       padding-bottom: 0;
       margin-left: auto;
       margin-right: auto;
@@ -59,13 +59,19 @@
     &:last-of-type{
       border-bottom: 1px solid #e7e7e7;
     }
+    @include mixin.pad{
+      & br{
+        display: none;
+      }
+    }
     @include mixin.mobile{
       width: 100%;
-      text-align: center;
+      text-align: left;
       margin-left: auto;
       margin-right: auto;
       border-top: none;
       border-bottom: 1px solid #e7e7e7;
+      
     }
   }
 

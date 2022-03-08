@@ -61,6 +61,9 @@
     margin: 13px 20px 13px;
     background-color: #978f10;
     position: relative;
+    @include mixin.mobile{
+    display: none;
+    }
     // カレンダーのロゴ
     &:before {
       position: absolute;
@@ -75,6 +78,7 @@
       background-position: 0 0;
       background-size: contain;
       @include mixin.mobile{
+        
         top: 17px;
         left: 6px;
         width: 16px;

@@ -62,6 +62,7 @@
     background-color: #978f10;
     position: relative;
     @include mixin.mobile{
+      display: none;
       padding: 17px 5px 17px 25px;
       margin: 0;
     }

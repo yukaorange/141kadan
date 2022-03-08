@@ -46,6 +46,12 @@
     line-height: 2;
     margin-bottom: 8rem;
     padding: 0 2%;
+    @include mixin.mobile{
+      text-align: left;
+    & br{
+      display: none;
+    }
+    }
   }
 
   // コンテンツリスト
@@ -78,6 +84,9 @@
         margin-right: auto;
         max-width: none;
         @include mixin.white;
+        & br{
+          display: none;
+        }
       }
     }
     // イメージ共通スタイル

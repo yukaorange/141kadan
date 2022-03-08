@@ -11,7 +11,7 @@
   &-container {
     padding-bottom: 4.875rem;
     @include mixin.pad{
-    padding-bottom: 2rem;
+    padding-bottom: 0rem;
     }
   }
 
@@ -151,7 +151,7 @@
     &:not(:last-child) {
       margin-bottom: 7.625rem;
       @include mixin.pad {
-        margin-bottom: 2rem;
+        margin-bottom: 0;
       }
     }
   }
