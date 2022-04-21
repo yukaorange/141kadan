@@ -36,6 +36,13 @@
         }
     }
   }
+  &-title{
+    color: #ffffff;
+    &._sub{
+      color: #000;
+    }
+  }
+  
 
   &-links {
     display: flex;

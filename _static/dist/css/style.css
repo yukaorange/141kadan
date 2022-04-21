@@ -528,6 +528,12 @@ img {
     max-width: 150px;
   }
 }
+.header-title {
+  color: #ffffff;
+}
+.header-title._sub {
+  color: #000;
+}
 .header-links {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -679,14 +685,13 @@ html {
   }
 }
 
-body {
+.body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  overflow-x: hidden;
 }
-body.no-scroll {
-  overflow: hidden;
+.body.no-scroll {
+  overflow-y: hidden;
 }
 
 .fv {
@@ -1070,20 +1075,20 @@ body.no-scroll {
   font-size: 1.5rem;
 }
 .mobile-link:nth-child(1) {
-  background-image: url(../images/service-image1.png);
+  background-image: url(../images/service-image1.jpg);
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
 }
 .mobile-link:nth-child(2) {
-  background-image: url(../images/plan-image3.png);
+  background-image: url(../images/menu-image3.jpg);
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
 }
 .mobile-link:nth-child(3) {
-  background-image: url(../images/menu-image3.png);
+  background-image: url(../images/menu-image4.jpg);
   background-repeat: repeat;
   background-position: center;
   background-size: cover;
@@ -2216,6 +2221,73 @@ body.no-scroll {
   .access-map {
     width: 100%;
     padding-bottom: 300px;
+  }
+}
+
+.loading.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #333;
+}
+.loading.container .block {
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+.loading.container .block span {
+  position: absolute;
+  color: #ffffff;
+  font-weight: bold;
+  top: 20px;
+  right: -50px;
+  width: 100px;
+}
+.loading.container .circle {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  -webkit-animation: loading 1s infinite;
+          animation: loading 1s infinite;
+}
+.loading.container .circle:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.loading.container .circle:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

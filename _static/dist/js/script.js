@@ -1,4 +1,16 @@
 $(function () {
+  // loading画面
+  $(window).on('load', function () {
+    endLoading()
+  })
+  // ローディング非表示処理
+  function endLoading() {
+    $('.loading').fadeOut(3000)
+  }
+
+
+
+
   // 日付選択カレンダー
   // 選択可能日（始期）を設定
   let minDate = new Date();
@@ -60,11 +72,13 @@ $(function () {
   function slideOpen() {
     $(".mobile-bg").fadeIn();
     $(".mobile-links").fadeIn();
+    $(".body").addClass("no-scroll");
   }
 
   function slideClose() {
     $(".mobile-bg").fadeOut();
     $(".mobile-links").fadeOut();
+    $(".body").removeClass("no-scroll");
   }
 
   // //===========================
@@ -86,7 +100,7 @@ $(function () {
   function ModalOpen() {
     $(".modal-bg").fadeIn();
     $(".modal-container").fadeIn();
-    $("body").addClass("no-scroll");
+    $(".body").addClass("no-scroll");
   }
 
   function ModalClose() {

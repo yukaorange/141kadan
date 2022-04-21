@@ -13,13 +13,13 @@ html{
   }
 }
 
-body {
+.body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  overflow-x:hidden ;
+  
 
   &.no-scroll {
-    overflow: hidden;
+    overflow-y: hidden;
   }
 }

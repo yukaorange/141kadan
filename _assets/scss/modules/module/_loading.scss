@@ -1,0 +1,50 @@
+@use "../variables/variables";
+@use "../mixin/mixin";
+
+// 予約画面（モーダル）
+.loading {
+  &.container {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333;
+    
+    .block {
+      width: 40px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      span{
+        position: absolute;
+        color: #ffffff;
+        font-weight: bold;
+        top: 20px;
+        right: -50px;
+        width: 100px;
+      }
+    }
+    .circle {
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: loading 1s infinite;
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+    }
+
+    @keyframes loading {
+      0% {
+        transform: scale(0.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
